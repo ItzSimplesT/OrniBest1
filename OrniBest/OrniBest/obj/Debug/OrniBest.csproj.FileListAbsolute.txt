@@ -16,3 +16,6 @@ c:\users\tiago\documents\visual studio 2015\Projects\OrniBest\OrniBest\obj\Debug
 c:\users\tiago\documents\visual studio 2015\Projects\OrniBest\OrniBest\obj\Debug\Utilizador.g.cs
 c:\users\tiago\documents\visual studio 2015\Projects\OrniBest\OrniBest\obj\Debug\PageInicial.baml
 c:\users\tiago\documents\visual studio 2015\Projects\OrniBest\OrniBest\obj\Debug\Utilizador.baml
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\OrniBest.exe.config
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\OrniBest.exe
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\OrniBest.pdb
