@@ -9,11 +9,11 @@
       Title="Utilizador" Background="White">
 
     <Grid>
-        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="162,119,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
-        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="227,123,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-       
-            <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="109" Margin="28,35,0,0" VerticalAlignment="Top" Width="120" />
-        
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="195,67,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
+        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="280,72,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
+        <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="109" Margin="28,35,0,0" VerticalAlignment="Top" Width="120" />
+
         <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="40,165,0,0" VerticalAlignment="Top" Width="112" Height="26" BorderBrush="black" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
 
     </Grid>
