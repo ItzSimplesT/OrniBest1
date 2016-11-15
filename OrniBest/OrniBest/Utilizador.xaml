@@ -5,10 +5,16 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrniBest"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="Utilizador" Background="Aqua">
+      d:DesignHeight="688" d:DesignWidth="1032"
+      Title="Utilizador" Background="White">
 
     <Grid>
-        
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="162,119,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
+        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="227,123,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Border BorderThickness="1">
+            <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="109" Margin="28,35,0,0" VerticalAlignment="Top" Width="120" />
+        </Border>
+        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="40,165,0,0" VerticalAlignment="Top" Width="112" Height="26" BorderBrush="black" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
+
     </Grid>
 </Page>
