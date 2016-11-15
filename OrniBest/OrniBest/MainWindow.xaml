@@ -7,8 +7,8 @@
         mc:Ignorable="d"
         Title="OrniBest" Height="720" Width="1280"
           WindowStyle="None" AllowsTransparency="True"
-    Background="Transparent"
-    >
+         Background="Transparent" Icon="ornibest.ico">
+    
     <Window.Resources>
         <LinearGradientBrush x:Key="WindowFrameBrush" StartPoint="0,0.5" EndPoint="1,0.5">
             <GradientStop Color="#A0DAE4" Offset="0.4"/>
@@ -24,13 +24,13 @@
             <Border Background="{StaticResource WindowFrameBrush}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
               CornerRadius="5,5,0,0" Margin="-1,0,-1,0" MouseLeftButtonDown="DragWindow">
                 <Grid>
-                    <TextBlock Foreground="White" FontWeight="Bold" VerticalAlignment="Center" Margin="10,2,10,2"
+                    <TextBlock Text="OrniBest" Foreground="Black" VerticalAlignment="Center" Margin="10,2,10,2" 
             />
                     <Image x:Name="Delete_64px_4_png" Margin="1253,7,0,1" Source="icon/Delete_64px_4.png" Stretch="Fill" MouseDown="comando_fechar"/>
                 </Grid>
             </Border>
-            <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="688" Margin="245,0,-1,0" Grid.Row="1" VerticalAlignment="Top" Width="1032" ContentRendered="frame_removenavbar" />
-            <Button x:Name="btt_utilizador" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="-5,59,0,0" Background="#A0DAE4" Click="btt_utilizador_Click_1">
+            <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="688" Margin="250,0,-1,0" Grid.Row="1" VerticalAlignment="Top" Width="1027" ContentRendered="frame_removenavbar" />
+            <Button x:Name="btt_utilizador" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,59,0,0" Background="#A0DAE4" Click="btt_utilizador_Click_1">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="Gender_Neutral_User_64px_png" Height="49" Source="icon/Gender Neutral User_64px.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left"/>
                     <Label Padding="0" Content="Utilizador" Height="25" Width="72" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
@@ -39,7 +39,7 @@
 
             </Button>
             <Image x:Name="Minus_Math__64px_2_png" Margin="1230,10,24,684" Source="icon/Minus Math _64px_2.png" Stretch="Fill" Grid.RowSpan="2" MouseDown="comando_minimizar"/>
-            <Button x:Name="btt_piniqcial" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="-5,0,0,0" Background="#A0DAE4" Click="btt_pinicial_Click">
+            <Button x:Name="btt_piniqcial" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="#A0DAE4" Click="btt_pinicial_Click">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="Pinicial" Height="49" Source="icon/Home_64px.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left"/>
                     <Label Padding="0" Content="Página Incial" Height="27" Width="78" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>

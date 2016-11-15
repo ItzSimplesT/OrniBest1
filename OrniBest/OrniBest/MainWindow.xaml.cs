@@ -25,6 +25,7 @@ namespace OrniBest
             InitializeComponent();
             frame.Content = new PageInicial();
             
+            
         }
         public void DragWindow(object sender, MouseButtonEventArgs args)
         {

@@ -25,6 +25,7 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
+            
         }
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
