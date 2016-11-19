@@ -5,10 +5,22 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrniBest"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
-      Title="Utilizador" Background="Aqua">
+      d:DesignHeight="688" d:DesignWidth="1032"
+      Title="Utilizador" Background="White">
 
     <Grid>
-        
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="262,69,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
+        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Border  HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="#5B5B5B" BorderThickness="2" Margin="18,15,0,0" Height="183" Width="214">
+            <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="121" Margin="28,35,0,0" VerticalAlignment="Top" Width="187" />
+        </Border>
+        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="120,203,0,0" VerticalAlignment="Top" Width="112" Height="29" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
+        <Label x:Name="lb_morada" Content="Morada :" HorizontalAlignment="Left" Margin="252,116,0,0" VerticalAlignment="Top" Height="27" Width="80" FontSize="15"/>
+        <TextBox x:Name="tb_morada" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_codigopostal" Content="Codigo Postal :" HorizontalAlignment="Left" Margin="508,67,0,0" VerticalAlignment="Top" Height="27" Width="114" FontSize="15"/>
+        <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="23" Margin="627,71,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="237,158,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15"/>
+        <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="327,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+
     </Grid>
 </Page>
