@@ -9,18 +9,50 @@
       Title="Utilizador" Background="White">
 
     <Grid>
-        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="262,69,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
-        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Border  HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="#5B5B5B" BorderThickness="2" Margin="18,15,0,0" Height="183" Width="214">
-            <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="121" Margin="28,35,0,0" VerticalAlignment="Top" Width="187" />
-        </Border>
+
+        <Grid>
+
+            <Image Name="image_utilizador">
+                <Image.Clip>
+                    <EllipseGeometry RadiusX="150" RadiusY="150"
+                                 Center="200 130"/>
+                </Image.Clip>
+            </Image>
+            <Ellipse  Margin="82,56,801,501" />
+        </Grid>
+
+
         <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="120,203,0,0" VerticalAlignment="Top" Width="112" Height="29" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
-        <Label x:Name="lb_morada" Content="Morada :" HorizontalAlignment="Left" Margin="252,116,0,0" VerticalAlignment="Top" Height="27" Width="80" FontSize="15"/>
-        <TextBox x:Name="tb_morada" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lb_codigopostal" Content="Codigo Postal :" HorizontalAlignment="Left" Margin="508,67,0,0" VerticalAlignment="Top" Height="27" Width="114" FontSize="15"/>
-        <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="23" Margin="627,71,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="237,158,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15"/>
-        <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="327,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <!-- Nome, verificado -->
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="298,69,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
+        <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="10" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Height="24"  Width="225" Margin="363,72,444,592">
+            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="363,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="357"/>
+        </Border>
+        <!-- Morada, verificado -->
+        <Label x:Name="lb_morada" Content="Morada :" HorizontalAlignment="Left" Margin="288,116,0,0" VerticalAlignment="Top" Height="27" Width="80" FontSize="15"/>
+        <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="10" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Height="24"  Width="337" Margin="363,116,332,548" RenderTransformOrigin="0.5,0.5" >
+            <TextBox x:Name="tb_morada" Text=" " HorizontalAlignment="Left" Height="23" Margin="363,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="357"/>
+        </Border>
+        <!-- Codigo Postal, verificado -->
+        <Label x:Name="lb_codigopostal" Content="Codigo Postal :" HorizontalAlignment="Left" Margin="244,242,0,0" VerticalAlignment="Top" Height="30" Width="114" FontSize="15"/>
+        <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="10" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Height="24"  Width="225" Margin="363,242,444,422">
+            <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="24" Margin="363,246,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153"/>
+        </Border>
+        <!-- Telemovel, verificado -->
+        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="273,158,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15"/>
+        <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="10" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Height="24"  Width="225" Margin="363,158,444,506">
+            <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="363,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153"/>
+        </Border>
+        <!-- Telefone, verificado  -->
+        <Label x:Name="lb_telefone" Content="Telefone :" HorizontalAlignment="Left" Margin="273,199,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15"/>
+        <Border BorderThickness="1" BorderBrush="Gray" CornerRadius="10" Padding="2"
+        HorizontalAlignment="Center" VerticalAlignment="Center" Height="22"  Width="225" Margin="363,203,444,463">
+            <TextBox x:Name="tb_telefone" Text=" " HorizontalAlignment="Left" Height="22" Margin="363,203,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="153" BorderThickness="0"/>
+        </Border>
 
     </Grid>
 </Page>
