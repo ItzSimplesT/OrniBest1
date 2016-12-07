@@ -11,25 +11,71 @@
     <Grid>
 
         <Grid>
+<!-- Combo box Style-->
+            <ControlTemplate x:Key="CustomToggleButton" TargetType="ToggleButton">
+                <Grid>
+                    <Border Name="Border" />
+                    <Border Name="SmallBorder" />
+                    <Path Name="Arrow" />
+                </Grid>
+            </ControlTemplate>
 
-            <Image Name="image_utilizador" Margin="-10,19,10,-29">
+            <Style TargetType="{x:Type ComboBoxItem}">
+                <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                            <Border>
+                                <ContentPresenter />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ComboBox">
+                            <Grid>
+                                <ToggleButton Template="{StaticResource CustomToggleButton}" />
+                                <ContentPresenter />
+                                <TextBox />
+                                <Popup>
+                                    <Grid>
+                                        <Border>
+                                            <ScrollViewer>
+                                                <ItemsPresenter />
+                                            </ScrollViewer>
+                                        </Border>
+                                    </Grid>
+                                </Popup>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <!-- Acaba aqui-->
+            <Image Name="image_utilizador" Margin="0,0,0,-10">
                 <Image.Clip>
                     <EllipseGeometry Center="170,90" RadiusX="90" RadiusY="90" />
                 </Image.Clip>
             </Image>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="242,50,0,0" VerticalAlignment="Top" Width="480"/>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="242,0,0,0" VerticalAlignment="Top" Width="480">
-                <Label x:Name="lb_pesssoais" Content="Editar Dados Pessoais" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="332" FontSize="25" Margin="9,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
+                <Label x:Name="lb_pesssoais" Content="Editar Dados Pessoais" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="270" FontSize="25" Margin="9,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
             </Border>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="106" Margin="242,346,0,0" VerticalAlignment="Top" Width="480">
-                <Label x:Name="lb_DataNascimento" Content="Data de Nascimento" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="332" FontSize="25" Margin="100,-1,0,0" FontFamily="Arial" Foreground="#FF9E9D9D" />
+                <Label x:Name="lb_DataNascimento" Content="Data de Nascimento" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="238" FontSize="25" Margin="123,-1,0,0" FontFamily="Arial" Foreground="#FF9E9D9D" />
             </Border>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="205" Margin="242,452,0,0" VerticalAlignment="Top" Width="480"/>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="722,0,0,0" VerticalAlignment="Top" Width="276">
                 <Label x:Name="lb_clube" Content="Clube" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="256" FontSize="25" Margin="-1,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
             </Border>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="722,50,0,0" VerticalAlignment="Top" Width="276"/>
-            <ComboBox x:Name="cb_dia" HorizontalAlignment="Left" Margin="284,396,0,0" VerticalAlignment="Top" Width="84" Height="32"/>
+            <ComboBox x:Name="cb_dia" HorizontalAlignment="Left" Margin="284,396,0,0" VerticalAlignment="Top" Width="84" Height="32" Style=/>
             <ComboBox x:Name="cb_mes" HorizontalAlignment="Left" Margin="401,396,0,0" VerticalAlignment="Top" Width="162" Height="32"/>
             <ComboBox x:Name="cb_ano" HorizontalAlignment="Left" Margin="598,396,0,0" VerticalAlignment="Top" Width="94" Height="32"/>
             <!--<Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="657" Margin="242,0,0,0" VerticalAlignment="Top" Width="756"/>
@@ -39,7 +85,7 @@
         </Grid>
 
 
-        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="70,203,0,0" VerticalAlignment="Top" Width="112" Height="29" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
+        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="70,203,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
         <!-- Nome, verificado -->
         <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="317,75,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
