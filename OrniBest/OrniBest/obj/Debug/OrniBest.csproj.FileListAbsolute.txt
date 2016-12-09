@@ -55,3 +55,9 @@ C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Utilizador.bam
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\OrniBest.g.resources
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\OrniBest.Properties.Resources.resources
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\OrniBest.csproj.GenerateResource.Cache
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\MahApps.Metro.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\Microsoft.Expression.Interactions.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\MahApps.Metro.pdb
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\MahApps.Metro.xml
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\Microsoft.Expression.Interactions.xml

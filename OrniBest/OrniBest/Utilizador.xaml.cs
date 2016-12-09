@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace OrniBest
 {
@@ -25,6 +26,8 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
+            
+
             
         }
 
@@ -45,7 +48,7 @@ namespace OrniBest
                 try
                 {
 
-                    image_utilizador.Source = new BitmapImage(new Uri(openFileDialog1.FileName));
+                   
                     
                     
 
@@ -58,6 +61,12 @@ namespace OrniBest
                 }
 
             }
+
+        }
+        private void OnNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(e.Uri.AbsoluteUri);
+            e.Handled = true;
         }
     }
 }

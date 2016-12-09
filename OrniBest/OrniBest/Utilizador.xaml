@@ -4,61 +4,15 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrniBest"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
       mc:Ignorable="d" 
       d:DesignHeight="688" d:DesignWidth="1032"
       Title="Utilizador" Background="White">
 
     <Grid>
-
         <Grid>
-<!-- Combo box Style-->
-            <ControlTemplate x:Key="CustomToggleButton" TargetType="ToggleButton">
-                <Grid>
-                    <Border Name="Border" />
-                    <Border Name="SmallBorder" />
-                    <Path Name="Arrow" />
-                </Grid>
-            </ControlTemplate>
-
-            <Style TargetType="{x:Type ComboBoxItem}">
-                <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
-                <Setter Property="Control.Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type ComboBoxItem}">
-                            <Border>
-                                <ContentPresenter />
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <Style TargetType="{x:Type ComboBox}">
-                <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
-                <Setter Property="Control.Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="ComboBox">
-                            <Grid>
-                                <ToggleButton Template="{StaticResource CustomToggleButton}" />
-                                <ContentPresenter />
-                                <TextBox />
-                                <Popup>
-                                    <Grid>
-                                        <Border>
-                                            <ScrollViewer>
-                                                <ItemsPresenter />
-                                            </ScrollViewer>
-                                        </Border>
-                                    </Grid>
-                                </Popup>
-                            </Grid>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-
-            <!-- Acaba aqui-->
-            <Image Name="image_utilizador" Margin="0,0,0,-10">
+            <Image Name="image_utilizador" Margin="43,28,-43,-38">
                 <Image.Clip>
                     <EllipseGeometry Center="170,90" RadiusX="90" RadiusY="90" />
                 </Image.Clip>
@@ -74,10 +28,32 @@
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="722,0,0,0" VerticalAlignment="Top" Width="276">
                 <Label x:Name="lb_clube" Content="Clube" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="256" FontSize="25" Margin="-1,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
             </Border>
-            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="722,50,0,0" VerticalAlignment="Top" Width="276"/>
-            <ComboBox x:Name="cb_dia" HorizontalAlignment="Left" Margin="284,396,0,0" VerticalAlignment="Top" Width="84" Height="32" Style=/>
-            <ComboBox x:Name="cb_mes" HorizontalAlignment="Left" Margin="401,396,0,0" VerticalAlignment="Top" Width="162" Height="32"/>
-            <ComboBox x:Name="cb_ano" HorizontalAlignment="Left" Margin="598,396,0,0" VerticalAlignment="Top" Width="94" Height="32"/>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="722,50,0,0" VerticalAlignment="Top" Width="276">
+                <ComboBox x:Name="comboBox" Margin="9,55,9,213" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Height="26" Width="256" BorderBrush="#FFC5C2C2"/>
+            </Border>
+
+           <!-- <Button x:Name="bt_sugerir" Content="Sugerir Clube" HorizontalAlignment="Left" Margin="871,292,0,0" VerticalAlignment="Top" Width="112" Height="35" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>-->
+           
+
+
+
+            <DatePicker Name="data_nascimento" HorizontalAlignment="Left" Margin="418,396,0,0" VerticalAlignment="Top" Height="32" Width="132"  />
+            <Ellipse Margin="64,50,840,506" Stroke="#FF302A2A"  >
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="imagens/transferir.jpg"/>
+                    <!--{Binding Photo}-->
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button x:Name="bt_salvar" Content="Salvar Dados" HorizontalAlignment="Left" Margin="871,590,0,0" VerticalAlignment="Top" Width="112" Height="36" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>
+                    
+               <Label Content="Send Email" Margin="880,320,34,342">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <!-- <ei:LaunchUriOrFileAction Path="mailto:example@stackoverflow.com" /> -->
+                    </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                </Label>
+
             <!--<Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="657" Margin="242,0,0,0" VerticalAlignment="Top" Width="756"/>
             -->
 
@@ -87,7 +63,7 @@
 
         <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="70,203,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
         <!-- Nome, verificado -->
-        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="317,75,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="309,80,0,0" VerticalAlignment="Top" Height="27" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
         HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,75,424,0">
             <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,2,0,-1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0"/>
@@ -108,7 +84,7 @@
         <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="287,120,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.717,1"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2" 
         HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,120,424,0">
-            <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="9,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197" BorderThickness="0"/>
+            <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="9,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197" BorderThickness="0" />
         </Border>
         <!-- Telefone, verificado  -->
         <Label x:Name="lb_telefone" Content="Telefone :" HorizontalAlignment="Left" Margin="298,180,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.833,0.712"/>
