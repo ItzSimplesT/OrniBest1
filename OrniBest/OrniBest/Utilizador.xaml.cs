@@ -47,6 +47,7 @@ namespace OrniBest
 
                     image_utilizador.Source = new BitmapImage(new Uri(openFileDialog1.FileName));
                     
+                    
 
 
 
