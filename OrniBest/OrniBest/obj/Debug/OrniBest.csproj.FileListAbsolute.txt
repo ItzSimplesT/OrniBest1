@@ -61,3 +61,4 @@ C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\System.Windows
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\MahApps.Metro.pdb
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\MahApps.Metro.xml
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\Microsoft.Expression.Interactions.xml
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\System.Windows.Interactivity.xml
