@@ -4,23 +4,94 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:OrniBest"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+      xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
       mc:Ignorable="d" 
       d:DesignHeight="688" d:DesignWidth="1032"
       Title="Utilizador" Background="White">
 
     <Grid>
-        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="262,69,0,0" VerticalAlignment="Top" Height="27" Width="60" FontSize="15"/>
-        <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,73,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Border  HorizontalAlignment="Left" VerticalAlignment="Top"  BorderBrush="#5B5B5B" BorderThickness="2" Margin="18,15,0,0" Height="183" Width="214">
-            <Image x:Name="image_utilizador" HorizontalAlignment="Left" Height="121" Margin="28,35,0,0" VerticalAlignment="Top" Width="187" />
+        <Grid>
+            <Image Name="image_utilizador">
+                <Image.Clip>
+                    <EllipseGeometry Center="170,90" RadiusX="90" RadiusY="90" />
+                </Image.Clip>
+            </Image>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="242,50,0,0" VerticalAlignment="Top" Width="480"/>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="242,0,0,0" VerticalAlignment="Top" Width="480">
+                <Label x:Name="lb_pesssoais" Content="Editar Dados Pessoais" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="270" FontSize="25" Margin="9,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
+            </Border>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="106" Margin="242,346,0,0" VerticalAlignment="Top" Width="480">
+                <Label x:Name="lb_DataNascimento" Content="Data de Nascimento" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="238" FontSize="25" Margin="123,-1,0,0" FontFamily="Arial" Foreground="#FF9E9D9D" />
+            </Border>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="205" Margin="242,452,0,0" VerticalAlignment="Top" Width="480"/>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="50" Margin="722,0,0,0" VerticalAlignment="Top" Width="276">
+                <Label x:Name="lb_clube" Content="Clube" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="256" FontSize="25" Margin="-1,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
+            </Border>
+            <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="722,50,0,0" VerticalAlignment="Top" Width="276">
+                <ComboBox x:Name="comboBox" Margin="9,55,9,213" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Height="26" Width="256" BorderBrush="#FFC5C2C2"/>
+            </Border>
+
+           <!-- <Button x:Name="bt_sugerir" Content="Sugerir Clube" HorizontalAlignment="Left" Margin="871,292,0,0" VerticalAlignment="Top" Width="112" Height="35" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>-->
+           
+
+
+
+            <DatePicker Name="data_nascimento" HorizontalAlignment="Left" Margin="418,396,0,0" VerticalAlignment="Top" Height="32" Width="132"  />
+            <Ellipse Margin="64,50,840,506" Stroke="#FF302A2A"  >
+                <Ellipse.Fill>
+                    <ImageBrush ImageSource="imagens/transferir.jpg"/>
+                    <!--{Binding Photo}-->
+                </Ellipse.Fill>
+            </Ellipse>
+            <Button x:Name="bt_salvar" Content="Salvar Dados" HorizontalAlignment="Left" Margin="871,590,0,0" VerticalAlignment="Top" Width="112" Height="36" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>
+                    
+               <Label Content="Enviar um Email" Margin="871,304,43,358" Background="#FFFBFBFB" BorderBrush="#FF2B2B2B">
+                  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <ei:LaunchUriOrFileAction Path="mailto:tiagoaah86@gmail.com" /> 
+                    </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                </Label>
+
+            <!--<Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="657" Margin="242,0,0,0" VerticalAlignment="Top" Width="756"/>
+            -->
+
+
+        </Grid>
+
+
+        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="70,203,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
+        <!-- Nome, verificado -->
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="309,80,0,0" VerticalAlignment="Top" Height="27" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,75,424,0">
+            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,2,0,-1" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Button x:Name="btt_selecionarimagem" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="120,203,0,0" VerticalAlignment="Top" Width="112" Height="29" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
-        <Label x:Name="lb_morada" Content="Morada :" HorizontalAlignment="Left" Margin="252,116,0,0" VerticalAlignment="Top" Height="27" Width="80" FontSize="15"/>
-        <TextBox x:Name="tb_morada" Text=" " HorizontalAlignment="Left" Height="23" Margin="327,121,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lb_codigopostal" Content="Codigo Postal :" HorizontalAlignment="Left" Margin="508,67,0,0" VerticalAlignment="Top" Height="27" Width="114" FontSize="15"/>
-        <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="23" Margin="627,71,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="237,158,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15"/>
-        <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="327,162,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="120"/>
+        <!-- Morada, verificado -->
+        <Label x:Name="lb_morada" Content="Morada :" HorizontalAlignment="Left" Margin="318,520,0,0" VerticalAlignment="Top" Height="27" Width="80" FontSize="15"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,520,408,0" RenderTransformOrigin="0.5,0.5"  >
+            <TextBox x:Name="tb_morada" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,3,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderThickness="0"/>
+        </Border>
+        <!-- Codigo Postal, verificado -->
+        <Label x:Name="lb_codigopostal" Content="Codigo Postal :" HorizontalAlignment="Left" Margin="278,594,0,0" VerticalAlignment="Top" Height="30" Width="114" FontSize="15"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="227" Margin="0,594,408,0">
+            <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="24" Margin="9,2,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderThickness="0"/>
+        </Border>
+        <!-- Telemovel, verificado -->
+        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="287,120,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.717,1"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2" 
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,120,424,0">
+            <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="9,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197" BorderThickness="0" MaxLength="10" MaxLines="9"/>
+        </Border>
+        <!-- Telefone, verificado  -->
+        <Label x:Name="lb_telefone" Content="Telefone :" HorizontalAlignment="Left" Margin="298,180,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.833,0.712" />
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,178,424,0">
+            <TextBox x:Name="tb_telefone" Text=" " HorizontalAlignment="Left" Height="22" Margin="8,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" BorderThickness="0" MaxLength="10"     MaxLines="1"/>
+        </Border>
 
     </Grid>
 </Page>
