@@ -81,13 +81,13 @@
             <TextBox x:Name="tb_codigopostal" Text=" " HorizontalAlignment="Left" Height="24" Margin="9,2,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderThickness="0"/>
         </Border>
         <!-- Telemovel, verificado -->
-        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="287,120,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.717,1"/>
+        <Label x:Name="lb_telemovel" Content="Telemovel :" HorizontalAlignment="Left" Margin="287,131,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.717,1"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2" 
-        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,120,424,0">
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,126,423,0">
             <TextBox x:Name="tb_telemovel" Text=" " HorizontalAlignment="Left" Height="22" Margin="9,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="197" BorderThickness="0" MaxLength="10" MaxLines="9"/>
         </Border>
         <!-- Telefone, verificado  -->
-        <Label x:Name="lb_telefone" Content="Telefone :" HorizontalAlignment="Left" Margin="298,180,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.833,0.712" />
+        <Label x:Name="lb_telefone" Content="STAM: " HorizontalAlignment="Left" Margin="318,178,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.833,0.712" />
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
         HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,178,424,0">
             <TextBox x:Name="tb_telefone" Text=" " HorizontalAlignment="Left" Height="22" Margin="8,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" BorderThickness="0" MaxLength="10"     MaxLines="1"/>

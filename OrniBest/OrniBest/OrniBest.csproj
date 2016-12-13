@@ -71,6 +71,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="basededados.cs" />
+    <Compile Include="passaro.xaml.cs">
+      <DependentUpon>passaro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="passaroEdit.xaml.cs">
+      <DependentUpon>passaroEdit.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilizador.xaml.cs">
       <DependentUpon>Utilizador.xaml</DependentUpon>
     </Compile>
@@ -87,6 +94,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="PageInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="passaro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="passaroEdit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -164,6 +179,18 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagens\transferir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\Bird_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\Edit_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\Delete_64px_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagens\AQUI.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

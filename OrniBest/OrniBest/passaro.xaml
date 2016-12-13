@@ -1,0 +1,61 @@
+﻿<Page x:Class="OrniBest.passaro"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrniBest"
+      mc:Ignorable="d" 
+      d:DesignHeight="688" d:DesignWidth="1032"
+      Title="passaro" Background="White">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="65*"/>
+            <ColumnDefinition Width="107*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="650" Margin="10,10,0,0" VerticalAlignment="Top" Width="267"/>
+        <!-- Nome -->
+        <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="303,75,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,75,430,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
+        <!-- Genero -->
+        <Label x:Name="lb_genero" Content="Genero :" HorizontalAlignment="Left" Margin="294,146,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,146,430,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_genero" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
+        <!-- NºAnilha -->
+        <Label x:Name="lb_anilha" Content="Nº Anilha:" HorizontalAlignment="Left" Margin="282,212,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,210,430,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_anilha" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent"/>
+        </Border>
+        <Label x:Name="lb_especie" Content="Especie :" HorizontalAlignment="Left" Margin="282,282,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,280,430,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_especie" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
+
+        <Border BorderThickness="3" BorderBrush="#FFC5C2C2" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="260"  Width="272" Margin="0,32,40,0" Grid.Column="1">
+            <Image x:Name="image" HorizontalAlignment="Left" Height="261" Margin="-5,-5,-5,-6" VerticalAlignment="Top" Width="272"  />
+        </Border>
+
+        <Button x:Name="btt_editar" Content="" HorizontalAlignment="Left" Margin="410,561,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" Click="btt_editar_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Edit_64px.png"/>
+            </Button.Background>
+
+        </Button>
+
+        <Button x:Name="btt_delete" Content="" HorizontalAlignment="Left" Margin="496,561,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
+            </Button.Background>
+        </Button>
+
+        <!-- Nome -->
+    </Grid>
+</Page>

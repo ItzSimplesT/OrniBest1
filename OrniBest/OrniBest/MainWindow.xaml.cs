@@ -57,6 +57,9 @@ namespace OrniBest
             frame.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
         }
 
-        
+        private void btt_passaro_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Content = new passaro();
+        }
     }
 }
