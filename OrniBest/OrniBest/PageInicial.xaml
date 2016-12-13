@@ -6,8 +6,14 @@
       xmlns:local="clr-namespace:OrniBest"
       xmlns:Custom="http://metro.mahapps.com/winfx/xaml/controls" x:Class="OrniBest.PageInicial"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="688" d:DesignWidth="1032"
       Title="PageInicial" Background="White">
 
-    <Grid/>
+    <Grid>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="576" Margin="-20,154,0,-42" VerticalAlignment="Top" Width="470" Source="imagens/aqui.png" Stretch="Fill"/>
+        <Label x:Name="label" Content="Bem-Vindo ao" HorizontalAlignment="Left" Margin="524,154,0,0" VerticalAlignment="Top" Height="88" Width="362" FontFamily="Stencil" FontSize="48" Background="#00000000" Foreground="#A0DAE4"/>
+        <Label x:Name="labelnext" Content="OrniBest..." HorizontalAlignment="Left" Margin="692,247,-22,0" VerticalAlignment="Top" Height="88" Width="362" FontFamily="Stencil" FontSize="48" Background="#00000000" Foreground="#FF78C2CF"/>
+
+
+    </Grid>
 </Page>
