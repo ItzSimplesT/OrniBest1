@@ -10,7 +10,7 @@
       Title="PageInicial" Background="White">
 
     <Grid>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="576" Margin="-20,154,0,-42" VerticalAlignment="Top" Width="470" Source="imagens/aqui.png" Stretch="Fill"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="568" Margin="-22,154,0,-34" VerticalAlignment="Top" Width="472" Source="imagens/aqui.png" Stretch="Fill"/>
         <Label x:Name="label" Content="Bem-Vindo ao" HorizontalAlignment="Left" Margin="524,154,0,0" VerticalAlignment="Top" Height="88" Width="362" FontFamily="Stencil" FontSize="48" Background="#00000000" Foreground="#A0DAE4"/>
         <Label x:Name="labelnext" Content="OrniBest..." HorizontalAlignment="Left" Margin="692,247,-22,0" VerticalAlignment="Top" Height="88" Width="362" FontFamily="Stencil" FontSize="48" Background="#00000000" Foreground="#FF78C2CF"/>
 
