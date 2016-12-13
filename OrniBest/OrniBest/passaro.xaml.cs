@@ -29,5 +29,10 @@ namespace OrniBest
         {
             this.NavigationService.Navigate(new Uri("passaroEdit.xaml", UriKind.Relative));
         }
+
+        private void btt_delete_Click(object sender, RoutedEventArgs e)
+        {
+            this.NavigationService.Navigate(new Uri("passaroDelete.xaml", UriKind.Relative));
+        }
     }
 }

@@ -9,7 +9,7 @@
       Title="Editar Pássaro" Background="White">
 
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="10,10,0,0" VerticalAlignment="Top" Width="230"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="10,10,0,0" VerticalAlignment="Top" Width="267"/>
         <!-- Nome -->
         <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="303,75,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
@@ -33,8 +33,8 @@
         <ComboBox x:Name="cb_especie" Margin="377,282,430,380" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Height="26" Width="225" BorderBrush="#FFC5C2C2" />
         <!--  Especie  -->
         <Border BorderThickness="3" BorderBrush="#FFC5C2C2" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="260"  Width="272" Margin="0,52,40,0">
-            <Image x:Name="image" HorizontalAlignment="Left" Height="260" Margin="-5" VerticalAlignment="Top" Width="272" />
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="260"  Width="272" Margin="0,46,40,0">
+            <Image x:Name="image" HorizontalAlignment="Left" Height="260" Margin="-5,-14,-5,0" VerticalAlignment="Top" Width="272" />
         </Border>
         <Button x:Name="btt_selecionari" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="864,317,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
         <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="885,564,0,0" VerticalAlignment="Top" Width="73" Height="74"/>

@@ -1,0 +1,29 @@
+﻿<Page x:Class="OrniBest.passaroDelete"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:OrniBest"
+      mc:Ignorable="d" 
+      d:DesignHeight="688" d:DesignWidth="1032"
+      Title="Apagar Pássaro" Background="White">
+
+    <Grid>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="635" Margin="10,43,0,0" VerticalAlignment="Top" Width="267"/>
+        <Label x:Name="lb_id" Content="Introduza o id do pássaro :" HorizontalAlignment="Left" Margin="353,71,0,0" VerticalAlignment="Top" Height="32" Width="247" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,71,235,0">
+            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
+        <Button x:Name="btt_deletef" Content="" HorizontalAlignment="Left" Margin="879,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_deletef_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="label" Content="Sabe que ao apagar um pássaro, não vai conseguir recuperar mais este. ATENÇÃO" HorizontalAlignment="Left" Margin="353,125,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="ID -" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="NºAnilha -" HorizontalAlignment="Left" Margin="61,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.057,0.537"/>
+        <Label x:Name="label3" Content="Nome" HorizontalAlignment="Left" Margin="143,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.659,0.414"/>
+
+    </Grid>
+</Page>

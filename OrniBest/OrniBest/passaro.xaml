@@ -50,12 +50,17 @@
 
         </Button>
 
-        <Button x:Name="btt_delete" Content="" HorizontalAlignment="Left" Margin="496,561,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" >
+        <Button x:Name="btt_delete" Content="" HorizontalAlignment="Left" Margin="496,561,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" Click="btt_delete_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
             </Button.Background>
         </Button>
-
+        <Button x:Name="btt_delete_Copy" Content="" HorizontalAlignment="Left" Margin="324,561,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
+            </Button.Background>
+        </Button>
+        
         <!-- Nome -->
     </Grid>
 </Page>
