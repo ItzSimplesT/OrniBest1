@@ -25,14 +25,17 @@ namespace OrniBest
             InitializeComponent();
         }
 
-        private void btt_editar_Click(object sender, RoutedEventArgs e)
+       
+
+        private void btt_Voltar_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("passaroEdit.xaml", UriKind.Relative));
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void btt_delete_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Uri("passaroDelete.xaml", UriKind.Relative));
+
         }
     }
 }

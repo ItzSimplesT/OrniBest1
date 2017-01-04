@@ -24,6 +24,11 @@
         <Label x:Name="label1" Content="ID -" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label2" Content="NºAnilha -" HorizontalAlignment="Left" Margin="61,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.057,0.537"/>
         <Label x:Name="label3" Content="Nome" HorizontalAlignment="Left" Margin="143,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.659,0.414"/>
+        <Button x:Name="btt_voltar" Content="" HorizontalAlignment="Left" Margin="793,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_voltar_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>

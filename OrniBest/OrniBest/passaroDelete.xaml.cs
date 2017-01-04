@@ -44,5 +44,11 @@ namespace OrniBest
             }
 
         }
+
+        private void btt_voltar_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
