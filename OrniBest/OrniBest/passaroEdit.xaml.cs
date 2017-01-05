@@ -29,19 +29,21 @@ namespace OrniBest
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            OpenFileDialog ofd1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Title = "Selecione uma imagem";
-            openFileDialog1.Filter = "All supported graphics | *.jpg; *.jpeg; *.png | " +
+            ofd1.InitialDirectory = "c:\\";
+            ofd1.Title = "Selecione uma imagem";
+            ofd1.Filter = "All supported graphics | *.jpg; *.jpeg; *.png | " +
              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" + "Portable Network Graphic (*.png)|*.png";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
+            ofd1.FilterIndex = 1;
+            ofd1.RestoreDirectory = true;
 
-            if (openFileDialog1.ShowDialog() == true)
+            if (ofd1.ShowDialog() == true)
             {
                 try
                 {
+                    
+                    
 
 
 
@@ -62,6 +64,7 @@ namespace OrniBest
         {
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
-        }
+
+        }   
     }
 }
