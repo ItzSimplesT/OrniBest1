@@ -83,13 +83,21 @@ namespace OrniBest {
         
         #line 42 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image Info;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 43 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btt_pinicial;
         
         #line default
         #line hidden
         
         
-        #line 44 "..\..\MainWindow.xaml"
+        #line 45 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image Pinicial;
         
@@ -97,7 +105,7 @@ namespace OrniBest {
         #line hidden
         
         
-        #line 50 "..\..\MainWindow.xaml"
+        #line 51 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button btt_passaro;
         
@@ -105,7 +113,7 @@ namespace OrniBest {
         #line hidden
         
         
-        #line 52 "..\..\MainWindow.xaml"
+        #line 53 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Image bird;
         
@@ -190,27 +198,36 @@ namespace OrniBest {
             #line hidden
             return;
             case 7:
-            this.btt_pinicial = ((System.Windows.Controls.Button)(target));
+            this.Info = ((System.Windows.Controls.Image)(target));
             
             #line 42 "..\..\MainWindow.xaml"
-            this.btt_pinicial.Click += new System.Windows.RoutedEventHandler(this.btt_pinicial_Click);
+            this.Info.MouseDown += new System.Windows.Input.MouseButtonEventHandler(this.Info_MouseDown);
             
             #line default
             #line hidden
             return;
             case 8:
-            this.Pinicial = ((System.Windows.Controls.Image)(target));
+            this.btt_pinicial = ((System.Windows.Controls.Button)(target));
+            
+            #line 43 "..\..\MainWindow.xaml"
+            this.btt_pinicial.Click += new System.Windows.RoutedEventHandler(this.btt_pinicial_Click);
+            
+            #line default
+            #line hidden
             return;
             case 9:
+            this.Pinicial = ((System.Windows.Controls.Image)(target));
+            return;
+            case 10:
             this.btt_passaro = ((System.Windows.Controls.Button)(target));
             
-            #line 50 "..\..\MainWindow.xaml"
+            #line 51 "..\..\MainWindow.xaml"
             this.btt_passaro.Click += new System.Windows.RoutedEventHandler(this.btt_passaro_Click);
             
             #line default
             #line hidden
             return;
-            case 10:
+            case 11:
             this.bird = ((System.Windows.Controls.Image)(target));
             return;
             }

@@ -42,13 +42,14 @@ namespace OrniBest
             {
                 try
                 {
-                    
-                    
+
+                    image.Source = new BitmapImage(new Uri(ofd1.FileName));
+                    image.Stretch = Stretch.Fill;
 
 
 
 
-
+ 
 
 
                 }

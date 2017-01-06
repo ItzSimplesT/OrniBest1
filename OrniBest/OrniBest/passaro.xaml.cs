@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace OrniBest
 {
@@ -36,6 +38,40 @@ namespace OrniBest
         private void btt_delete_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btt_selecionari_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd1 = new OpenFileDialog();
+
+            ofd1.InitialDirectory = "c:\\";
+            ofd1.Title = "Selecione uma imagem";
+            ofd1.Filter = "All supported graphics | *.jpg; *.jpeg; *.png | " +
+             "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" + "Portable Network Graphic (*.png)|*.png";
+            ofd1.FilterIndex = 1;
+            ofd1.RestoreDirectory = true;
+
+            if (ofd1.ShowDialog() == true)
+            {
+                try
+                {
+
+                    image.Source = new BitmapImage(new Uri(ofd1.FileName));
+                    image.Stretch = Stretch.Fill;
+
+
+
+
+
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Errou! Não introduziu corretamente! " + ex.Message);
+                }
+
+            }
         }
     }
 }

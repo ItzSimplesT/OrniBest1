@@ -46,7 +46,9 @@
             <Button.Background>
                 <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
             </Button.Background>
+
         </Button>
+        <Button x:Name="btt_selecionari" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="572,297,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Grid.Column="1" Click="btt_selecionari_Click" />
         <Button x:Name="btt_Voltar" Content="" HorizontalAlignment="Left" Margin="514,553,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" Click="btt_Voltar_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Delete_64px_7.png"/>

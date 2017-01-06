@@ -8,5 +8,7 @@ namespace OrniBest
 {
     class basededados
     {
+        // codigo aqui 
+        
     }
 }

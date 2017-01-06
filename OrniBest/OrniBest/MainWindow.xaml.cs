@@ -61,5 +61,10 @@ namespace OrniBest
         {
             frame.Content = new passaroMenu();
         }
+
+        private void Info_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
     }
 }

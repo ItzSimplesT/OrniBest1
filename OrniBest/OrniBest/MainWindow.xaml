@@ -39,6 +39,7 @@
 
             </Button>
             <Image x:Name="Minus_Math__64px_2_png" Margin="1230,10,24,684" Source="icon/Minus Math _64px_2.png" Stretch="Fill" Grid.RowSpan="2" MouseDown="comando_minimizar"/>
+            <Image x:Name="Info" Margin="1230,10,24,684" Source="icon/Info-52.png" Stretch="Fill" Grid.RowSpan="2" MouseDown="Info_MouseDown"/>
             <Button x:Name="btt_pinicial" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="#A0DAE4" Click="btt_pinicial_Click">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="Pinicial" Height="49" Source="icon/Home_64px.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left"/>
