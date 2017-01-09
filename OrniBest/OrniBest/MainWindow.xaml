@@ -8,7 +8,7 @@
         Title="OrniBest" Height="720" Width="1280"
           WindowStyle="None" AllowsTransparency="True"
          Background="Transparent" Icon="ornibest.ico">
-    
+
     <Window.Resources>
         <LinearGradientBrush x:Key="WindowFrameBrush" StartPoint="0,0.5" EndPoint="1,0.5">
             <GradientStop Color="#A0DAE4" Offset="0.4"/>
@@ -39,7 +39,6 @@
 
             </Button>
             <Image x:Name="Minus_Math__64px_2_png" Margin="1230,10,24,684" Source="icon/Minus Math _64px_2.png" Stretch="Fill" Grid.RowSpan="2" MouseDown="comando_minimizar"/>
-            <Image x:Name="Info" Margin="1230,10,24,684" Source="icon/Info-52.png" Stretch="Fill" Grid.RowSpan="2" MouseDown="Info_MouseDown"/>
             <Button x:Name="btt_pinicial" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="#A0DAE4" Click="btt_pinicial_Click">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="Pinicial" Height="49" Source="icon/Home_64px.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left"/>
@@ -53,13 +52,7 @@
                     <Image x:Name="bird" Height="49" Source="icon/Bird_48px.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left"/>
                     <Label Padding="0" Content="Pássaro" Height="25" Width="72" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
-
-
             </Button>
-
-
-
-
         </Grid>
     </Border>
 </Window>

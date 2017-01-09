@@ -37,8 +37,16 @@
             <Image x:Name="image" HorizontalAlignment="Left" Height="260" Margin="-5" VerticalAlignment="Top" Width="272" />
         </Border>
         <Button x:Name="btt_selecionari" Content="Selecione imagem..." HorizontalAlignment="Left" Margin="864,317,0,0" VerticalAlignment="Top" Width="128" Height="33" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_selecionarimagem_Click"/>
-        <Button x:Name="btt_voltar" Content="Voltar" HorizontalAlignment="Left" Margin="885,564,0,0" VerticalAlignment="Top" Width="73" Height="74" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_voltar_Click" />
-        <Button x:Name="btt_guardar" Content="Guardar" HorizontalAlignment="Left" Margin="754,564,0,0" VerticalAlignment="Top" Width="126" Height="74" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" />
+        <Button x:Name="btt_Voltar1" Content="" HorizontalAlignment="Left" Margin="825,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_Voltar1_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/Undo-64.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btt_save" Content="" HorizontalAlignment="Left" Margin="911,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_save_Click"  >
+            <Button.Background>
+                <ImageBrush ImageSource="icon/save-64.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Page>
