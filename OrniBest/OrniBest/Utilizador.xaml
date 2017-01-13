@@ -44,7 +44,7 @@
                     <!--{Binding Photo}-->
                 </Ellipse.Fill>
             </Ellipse>
-            <Button x:Name="bt_salvar" Content="Salvar Dados" HorizontalAlignment="Left" Margin="871,590,0,0" VerticalAlignment="Top" Width="112" Height="36" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>
+            <Button x:Name="bt_salvar" Content="Salvar Dados" HorizontalAlignment="Left" Margin="871,590,0,0" VerticalAlignment="Top" Width="112" Height="36" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial" Click="bt_salvar_Click"/>
                     
                <Label Content="Enviar um Email" Margin="871,304,43,358" Background="#FFFBFBFB" BorderBrush="#FF2B2B2B">
                   <i:Interaction.Triggers>
@@ -90,7 +90,7 @@
         <Label x:Name="lb_telefone" Content="STAM: " HorizontalAlignment="Left" Margin="318,178,0,0" VerticalAlignment="Top" Height="26" Width="90" FontSize="15" RenderTransformOrigin="0.833,0.712" />
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
         HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,178,424,0">
-            <TextBox x:Name="tb_telefone" Text=" " HorizontalAlignment="Left" Height="22" Margin="8,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" BorderThickness="0" MaxLength="10"     MaxLines="1"/>
+            <TextBox x:Name="tb_STAM" Text=" " HorizontalAlignment="Left" Height="22" Margin="8,4,0,-2" TextWrapping="Wrap"  VerticalAlignment="Top" Width="178" BorderThickness="0" MaxLength="10"     MaxLines="1"/>
         </Border>
 
     </Grid>

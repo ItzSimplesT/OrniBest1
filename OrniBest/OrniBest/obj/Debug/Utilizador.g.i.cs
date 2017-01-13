@@ -184,7 +184,7 @@ namespace OrniBest {
         
         #line 93 "..\..\Utilizador.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBox tb_telefone;
+        internal System.Windows.Controls.TextBox tb_STAM;
         
         #line default
         #line hidden
@@ -239,6 +239,12 @@ namespace OrniBest {
             return;
             case 7:
             this.bt_salvar = ((System.Windows.Controls.Button)(target));
+            
+            #line 47 "..\..\Utilizador.xaml"
+            this.bt_salvar.Click += new System.Windows.RoutedEventHandler(this.bt_salvar_Click);
+            
+            #line default
+            #line hidden
             return;
             case 8:
             this.btt_selecionarimagem = ((System.Windows.Controls.Button)(target));
@@ -277,7 +283,7 @@ namespace OrniBest {
             this.lb_telefone = ((System.Windows.Controls.Label)(target));
             return;
             case 18:
-            this.tb_telefone = ((System.Windows.Controls.TextBox)(target));
+            this.tb_STAM = ((System.Windows.Controls.TextBox)(target));
             return;
             }
             this._contentLoaded = true;

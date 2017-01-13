@@ -62,7 +62,7 @@ namespace OrniBest
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
 
-            string sql_id = "SELECT MAX(idProduto) as idAtual FROM Produtos";
+            string sql_id = "SELECT MAX(id_Utilizador) as idAtual FROM ";
             SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
             SQLiteDataReader reader = idCommando.ExecuteReader();
             int idUltimoRegisto = 0;
