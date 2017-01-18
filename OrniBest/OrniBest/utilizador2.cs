@@ -58,11 +58,12 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Utilizador(nome,telemovel,STAM,data_nascimento,Morada, cod_postal, id_clube)" +
-                             "VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+                             "VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada +  "','" + util.codigo_postal + "' , '" + util.clube + "' ) "; 
+            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
 
-            string sql_id = "SELECT MAX(id_Utilizador) as idAtual FROM ";
+            string sql_id = "SELECT MAX(id_Utilizador) as idAtual FROM Utilizador ";
             SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
             SQLiteDataReader reader = idCommando.ExecuteReader();
             int idUltimoRegisto = 0;
