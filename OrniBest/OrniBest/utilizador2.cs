@@ -55,10 +55,10 @@ namespace OrniBest
         public static int AddRegistos(utilizador2 util)
         {
 
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
+            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Utilizador(nome,telemovel,STAM,data_nascimento,Morada, cod_postal, id_clube)" +
-                             "VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada +  "','" + util.codigo_postal + "' , '" + util.clube + "' ) "; 
+                             "VALUES ('" + util.nome + "'," + util.telemovel + "," + util.stam + ", '" + util.data_nascimento + "','" + util.morada +  "','" + util.codigo_postal + "' , " + util.clube + " ) "; 
             //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
@@ -72,6 +72,7 @@ namespace OrniBest
             reader.Dispose();
             myConn.Close();
             return idUltimoRegisto;
+            WPFCustomMessageBox.CustomMessageBox.Show("Adicionado com sucesso!");
 
         }
         
