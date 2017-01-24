@@ -27,7 +27,21 @@ namespace OrniBest
 
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
-            
+           // var res = Xceed.Wpf.Toolkit.MessageBox.Show(
+             ///              "Tens a certeza que quer apagar?",
+                //           "Atenção",
+                  //         MessageBoxButton.YesNoCancel,
+                    //       MessageBoxImage.None,
+                      //     (Style)Resources["MessageBoxStyle1"]
+                    //   );
+
+
+//            if ("No" == res.ToString())
+  //          {
+    //        }
+      //      if ("Yes" == res.ToString())
+        //    {
+         //   }
 
         }
 
