@@ -73,7 +73,7 @@ namespace OrniBest
 
         private void bt_salvar_Click(object sender, RoutedEventArgs e)
         {
-            utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),System.Convert.ToInt32(tb_STAM.Text),data_nascimento.Text,tb_morada.Text);
+           // utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),System.Convert.ToInt32(tb_STAM.Text),data_nascimento.Text,tb_morada.Text);
 
         }
     }
