@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using WPFCustomMessageBox;
 
 namespace OrniBest
 {
@@ -72,16 +73,9 @@ namespace OrniBest
             reader.Dispose();
             myConn.Close();
             return idUltimoRegisto;
-            WPFCustomMessageBox.CustomMessageBox.Show("Adicionado com sucesso!");
-
-        }
-        
             
-
-
-
-
-
+            
+        }
 
 
     } 
