@@ -34,23 +34,25 @@ namespace OrniBest
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
         {
             
-            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            OpenFileDialog ofd1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = "c:\\";
-            openFileDialog1.Title = "Selecione uma imagem";
-            openFileDialog1.Filter = "All supported graphics | *.jpg; *.jpeg; *.png | " +
+            ofd1.InitialDirectory = "c:\\";
+            ofd1.Title = "Selecione uma imagem";
+            ofd1.Filter = "All supported graphics | *.jpg; *.jpeg; *.png | " +
              "JPEG (*.jpg;*.jpeg)|*.jpg;*.jpeg|" + "Portable Network Graphic (*.png)|*.png";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
+            ofd1.FilterIndex = 1;
+            ofd1.RestoreDirectory = true;
 
-            if (openFileDialog1.ShowDialog() == true)
+            if (ofd1.ShowDialog() == true)
             {
                 try
                 {
 
-                   
-                    
-                    
+                    image_utilizador.Source = new BitmapImage(new Uri(ofd1.FileName));
+                    image_utilizador.Stretch = Stretch.Fill;
+
+
+
 
 
 
@@ -67,6 +69,13 @@ namespace OrniBest
         {
             Process.Start(e.Uri.AbsoluteUri);
             e.Handled = true;
+        }
+
+        private void bt_salvar_Click(object sender, RoutedEventArgs e)
+        {
+            int clube = 0;
+            utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),System.Convert.ToInt32(tb_STAM.Text),data_nascimento.Text,tb_morada.Text, tb_codigopostal.Text, clube);
+            utilizador2.AddRegistos(registo);
         }
     }
 }

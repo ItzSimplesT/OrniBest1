@@ -18,30 +18,16 @@ using System.Diagnostics;
 namespace OrniBest
 {
     /// <summary>
-    /// Interaction logic for passaro.xaml
+    /// Interaction logic for passaroEdit.xaml
     /// </summary>
-    public partial class passaro : Page
+    public partial class passaroEdit : Page
     {
-        public passaro()
+        public passaroEdit()
         {
             InitializeComponent();
         }
 
-       
-
-        private void btt_Voltar_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
-        }
-
-        private void btt_adicionar_Click(object sender, RoutedEventArgs e)
-        {
-
-
-        }
-
-        private void btt_selecionari_Click(object sender, RoutedEventArgs e)
+        private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd1 = new OpenFileDialog();
 
@@ -63,7 +49,7 @@ namespace OrniBest
 
 
 
-
+ 
 
 
                 }
@@ -73,6 +59,17 @@ namespace OrniBest
                 }
 
             }
+        }
+        
+        private void btt_save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btt_Voltar1_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

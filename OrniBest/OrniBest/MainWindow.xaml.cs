@@ -59,7 +59,13 @@ namespace OrniBest
 
         private void btt_passaro_Click(object sender, RoutedEventArgs e)
         {
-            frame.Content = new passaro();
+            frame.Content = new passaroMenu();
         }
+
+        private void Info_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
     }
 }
