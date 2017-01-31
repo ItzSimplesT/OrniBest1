@@ -126,6 +126,7 @@
     <Compile Include="passaro.xaml.cs">
       <DependentUpon>passaro.xaml</DependentUpon>
     </Compile>
+    <Compile Include="passaro2.cs" />
     <Compile Include="passaroDelete.xaml.cs">
       <DependentUpon>passaroDelete.xaml</DependentUpon>
     </Compile>

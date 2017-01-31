@@ -35,8 +35,9 @@ namespace OrniBest
             nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btt_delete_Click(object sender, RoutedEventArgs e)
+        private void btt_adicionar_Click(object sender, RoutedEventArgs e)
         {
+
 
         }
 
