@@ -11,23 +11,25 @@ namespace OrniBest
     class passaro2
     {
         private static Dictionary<int, passaro2> utilP = new Dictionary<int, passaro2>();
+        private int nanilha;
+        private string genero;
         private string nome;
-        private int telemovel;
-        private int stam;
-        private string data_nascimento;
-        private string morada;
-        private string codigo_postal;
-        private int clube;
+        private string foto;
+        private string Alimento;
+        private int id_utilizador;
+        private int id_especie;
+        private int id_gaiola;
 
-        public passaro2(string nome2, int telemovel2, int stam2, string data_nascimento2, string morada2, string codigo_postal2, int clube2)
+        public passaro2(int nanilha2, string genero2, string nome2, string foto2, string Alimento2, int id_utilizador2, int id_especie2, int id_gaiola2)
         {
+            this.nanilha = nanilha2;
+            this.genero = genero2;
             this.nome = nome2;
-            this.telemovel = telemovel2;
-            this.stam = stam2;
-            this.data_nascimento = data_nascimento2;
-            this.morada = morada2;
-            this.codigo_postal = codigo_postal2;
-            this.clube = clube2;
+            this.foto = foto2;
+            this.Alimento = Alimento2;
+            this.id_utilizador = id_utilizador2;
+            this.id_especie = id_especie2;
+            this.id_gaiola = id_gaiola2;
 
         }
 
@@ -38,33 +40,33 @@ namespace OrniBest
         {
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
             myConn.Open();
-            string sql_select = "SELECT * FROM Utilizador";
+            string sql_select = "SELECT * FROM Passaro";
             SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
             SQLiteDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
             {
-                utilizador2 newPassaro = new utilizador2((string)reader["nome"], (int)reader["telemovel"],
-                                                (int)reader["STAM"], (string)reader["data_nascimento"],
-                                                (string)reader["Morada"], (string)reader["cod_postal"],
-                                                (int)reader["id_clube"]);
+                passaro2 newPassaro = new passaro2((int)reader["n_anilha"], (string)reader["genero"],
+                                                (string)reader["nome"], (string)reader["foto"],
+                                                (string)reader["alimento"], (int)reader["id_utilizador"],
+                                                (int)reader["id_especie"], (int)reader["id_gaiola"]);
                // utilP.Add(Convert.ToInt32(reader["id_Utilizador"]), newPassaro);
             }
             reader.Dispose();
             myConn.Close();
             return utilP;
         }
-        public static int AddRegistos(utilizador2 util)
+        public static int AddRegistos(passaro2 utilP)
         {
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-           // string sql_add = "INSERT INTO Utilizador(nome,telemovel,STAM,data_nascimento,Morada, cod_postal, id_clube)" +
-               //              "VALUES ('" + util.nome + "'," + util.telemovel + "," + util.stam + ", '" + util.data_nascimento + "','" + util.morada + "','" + util.codigo_postal + "' , " + util.clube + " ) ";
-            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
-            //SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            //newCommand.ExecuteNonQuery();
+            string sql_add = "INSERT INTO Utilizador(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+           //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+          SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+           newCommand.ExecuteNonQuery();
 
-            string sql_id = "SELECT MAX(id_Utilizador) as idAtual FROM Utilizador ";
+            string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
             SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
             SQLiteDataReader reader = idCommando.ExecuteReader();
             int idUltimoRegisto = 0;

@@ -20,16 +20,16 @@
             <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
         <!-- Genero -->
-        <Label x:Name="lb_genero" Content="Genero :" HorizontalAlignment="Left" Margin="1,146,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
+        <Label x:Name="lb_genero" Content="Genero :" HorizontalAlignment="Left" Margin="1,140,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
         <!-- NºAnilha -->
-        <Label x:Name="lb_anilha" Content="Nº Anilha:" HorizontalAlignment="Left" Margin="0,212,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
+        <Label x:Name="lb_anilha" Content="Nº Anilha:" HorizontalAlignment="Left" Margin="0,209,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,210,430,0" Grid.Column="1">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,207,430,0" Grid.Column="1">
             <TextBox x:Name="tb_anilha" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent"/>
         </Border>
-        <Label x:Name="lb_especie" Content="Especie :" HorizontalAlignment="Left" Margin="0,282,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
+        <Label x:Name="lb_especie" Content="Especie :" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,280,430,0" Grid.Column="1">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,278,430,0" Grid.Column="1">
             <TextBox x:Name="tb_especie" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
 
@@ -40,7 +40,7 @@
 
         <Button x:Name="btt_adicionar" Content="" HorizontalAlignment="Left" Margin="600,553,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Grid.Column="1" Click="btt_adicionar_Click" >
             <Button.Background>
-                <ImageBrush ImageSource="icon/Delete_64px_7.png"/>
+                <ImageBrush ImageSource="icon/Save-64.png"/>
             </Button.Background>
 
         </Button>
@@ -51,12 +51,12 @@
             </Button.Background>
         </Button>
 
-        <RadioButton x:Name="masculino" Content="M" Grid.Column="1" HorizontalAlignment="Left" Margin="85,153,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
-        <RadioButton x:Name="femea" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="119,153,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
-        <Label x:Name="lb_alimento" Content="Alimento :" HorizontalAlignment="Left" Margin="0,338,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
-        <ComboBox x:Name="cb_alimento" Grid.Column="1" HorizontalAlignment="Left" Margin="94,342,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
-        <Label x:Name="lb_gaiola" Content="Gaiola :" HorizontalAlignment="Left" Margin="0,380,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
-        <ComboBox x:Name="cb_gaiola" Grid.Column="1" HorizontalAlignment="Left" Margin="94,384,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <RadioButton x:Name="masculino" Content="M" Grid.Column="1" HorizontalAlignment="Left" Margin="85,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <RadioButton x:Name="femea" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="119,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <Label x:Name="lb_alimento" Content="Alimento :" HorizontalAlignment="Left" Margin="0,337,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
+        <ComboBox x:Name="cb_alimento" Grid.Column="1" HorizontalAlignment="Left" Margin="94,341,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <Label x:Name="lb_gaiola" Content="Gaiola :" HorizontalAlignment="Left" Margin="0,382,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
+        <ComboBox x:Name="cb_gaiola" Grid.Column="1" HorizontalAlignment="Left" Margin="94,386,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
 
         <!-- Nome -->
     </Grid>

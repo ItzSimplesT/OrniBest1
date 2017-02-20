@@ -37,7 +37,10 @@ namespace OrniBest
 
         private void btt_adicionar_Click(object sender, RoutedEventArgs e)
         {
-
+            int id_ = 0;
+            passaro2 registo = new passaro2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text), System.Convert.ToInt32(tb_STAM.Text), data_nascimento.Text, tb_morada.Text, tb_codigopostal.Text, clube);
+            passaro2.AddRegistos(registo);
+            
 
         }
 
