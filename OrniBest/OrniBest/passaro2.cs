@@ -60,7 +60,7 @@ namespace OrniBest
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "INSERT INTO Utilizador(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+            string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
                     "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
           SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);

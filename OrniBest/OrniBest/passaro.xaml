@@ -29,8 +29,8 @@
         </Border>
         <Label x:Name="lb_especie" Content="Especie :" HorizontalAlignment="Left" Margin="0,280,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,278,430,0" Grid.Column="1">
-            <TextBox x:Name="tb_especie" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,336,421,0" Grid.Column="1">
+            <TextBox x:Name="tb_alimento" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
 
         <Border BorderThickness="3" BorderBrush="#FFC5C2C2" Padding="2"
@@ -51,10 +51,10 @@
             </Button.Background>
         </Button>
 
-        <RadioButton x:Name="masculino" Content="M" Grid.Column="1" HorizontalAlignment="Left" Margin="85,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
-        <RadioButton x:Name="femea" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="119,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <RadioButton x:Name="macho" Content="M" Grid.Column="1" HorizontalAlignment="Left" Margin="85,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2" ToolTip="Macho"/>
+        <RadioButton x:Name="femea" Content="F" Grid.Column="1" HorizontalAlignment="Left" Margin="119,147,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"  BorderThickness="1" BorderBrush="#FFC5C2C2" ToolTip="Femea"/>
         <Label x:Name="lb_alimento" Content="Alimento :" HorizontalAlignment="Left" Margin="0,337,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
-        <ComboBox x:Name="cb_alimento" Grid.Column="1" HorizontalAlignment="Left" Margin="94,341,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
+        <ComboBox x:Name="cb_especie" Grid.Column="1" HorizontalAlignment="Left" Margin="95,280,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
         <Label x:Name="lb_gaiola" Content="Gaiola :" HorizontalAlignment="Left" Margin="0,382,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1" />
         <ComboBox x:Name="cb_gaiola" Grid.Column="1" HorizontalAlignment="Left" Margin="94,386,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2"/>
 

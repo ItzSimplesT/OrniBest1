@@ -37,10 +37,28 @@ namespace OrniBest
 
         private void btt_adicionar_Click(object sender, RoutedEventArgs e)
         {
-            int id_ = 0;
-            passaro2 registo = new passaro2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text), System.Convert.ToInt32(tb_STAM.Text), data_nascimento.Text, tb_morada.Text, tb_codigopostal.Text, clube);
-            passaro2.AddRegistos(registo);
             
+            int id_espcie = 0;
+            int id_gaiola = 0;
+            int id_utilizador = 1;
+            string sexo;
+            string foto = "aindan";
+            if (macho.IsChecked == true)
+            {
+                sexo = "macho";
+                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, id_espcie, id_gaiola);
+                passaro2.AddRegistos(registo);
+
+            }
+            if (femea.IsChecked == true)
+            {
+                sexo = "femea";
+                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, id_espcie, id_gaiola);
+                passaro2.AddRegistos(registo);
+            }
+
+
+
 
         }
 
