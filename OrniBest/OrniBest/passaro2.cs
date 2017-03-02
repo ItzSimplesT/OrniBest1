@@ -11,16 +11,16 @@ namespace OrniBest
     class passaro2
     {
         private static Dictionary<int, passaro2> utilP = new Dictionary<int, passaro2>();
-        private int nanilha;
+        private long nanilha;
         private string genero;
         private string nome;
         private string foto;
         private string Alimento;
-        private int id_utilizador;
-        private int id_especie;
-        private int id_gaiola;
+        private long id_utilizador;
+        private long id_especie;
+        private long id_gaiola;
 
-        public passaro2(int nanilha2, string genero2, string nome2, string foto2, string Alimento2, int id_utilizador2, int id_especie2, int id_gaiola2)
+        public passaro2(long nanilha2, string genero2, string nome2, string foto2, string Alimento2, long id_utilizador2, long id_especie2, long id_gaiola2)
         {
             this.nanilha = nanilha2;
             this.genero = genero2;
@@ -38,18 +38,40 @@ namespace OrniBest
 
         public static Dictionary<int, passaro2> lerRegistos()
         {
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
+            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_select = "SELECT * FROM Passaro";
             SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
             SQLiteDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
             {
-                passaro2 newPassaro = new passaro2((int)reader["n_anilha"], (string)reader["genero"],
-                                                (string)reader["nome"], (string)reader["foto"],
-                                                (string)reader["alimento"], (int)reader["id_utilizador"],
-                                                (int)reader["id_especie"], (int)reader["id_gaiola"]);
-               // utilP.Add(Convert.ToInt32(reader["id_Utilizador"]), newPassaro);
+                long n_anilha = (long)reader["n_anilha"];
+                string genero = (string)reader["genero"];
+                string nome = (string)reader["nome"];
+                try
+                {
+                    string foto = (string)reader["foto"];
+                }
+                catch (Exception)
+                {
+
+                    string foto = "";
+                }
+                string alimento = (string)reader["alimento"];
+                long id_utilizador = (long)reader["id_utilizador"];
+                long id_especie = (long)reader["id_especie"];
+                long id_gaiola = (long)reader["id_gaiola"];
+                CustomMessageBox.Show("fad");
+
+                //passaro2 newPassaro = new passaro2((long)reader["n_anilha"], 
+                //                                    (string)reader["genero"],
+                //                                    (string)reader["nome"], 
+                //                                    (string)reader["foto"],
+                //                                    (string)reader["alimento"],
+                //                                    (long)reader["id_utilizador"],
+                //                                    (long)reader["id_especie"], 
+                //                                    (long)reader["id_gaiola"]);
+              //  utilP.Add(Convert.ToInt32(reader["id_Utilizador"]), newPassaro);
             }
             reader.Dispose();
             myConn.Close();
@@ -78,6 +100,7 @@ namespace OrniBest
 
 
         }
+        
 
 
     }
