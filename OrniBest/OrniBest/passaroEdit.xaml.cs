@@ -25,15 +25,10 @@ namespace OrniBest
         public passaroEdit()
         {
             InitializeComponent();
-            Dictionary<int, passaro2> pass = passaro2.lerRegistos();
-            foreach (var id in pass)
-            {
-                passaro2 a = id.Value;
-                lb_pass.Items.Add(a);
-            }
-            
-            
+            Dictionary<int, passaro2> utilP = new Dictionary<int, passaro2>();
+            utilP = passaro2.lerRegistos();
 
+            listBox.Items.Add(utilP);
         }
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
