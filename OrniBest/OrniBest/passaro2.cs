@@ -5,6 +5,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
 using WPFCustomMessageBox;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace OrniBest
 {
@@ -49,7 +61,7 @@ namespace OrniBest
                                                 (string)reader["nome"], (string)reader["foto"],
                                                 (string)reader["alimento"], (int)reader["id_utilizador"],
                                                 (int)reader["id_especie"], (int)reader["id_gaiola"]);
-               // utilP.Add(Convert.ToInt32(reader["id_Utilizador"]), newPassaro);
+              utilP.Add(Convert.ToInt32(reader["n_anilha"]), newPassaro);
             }
             reader.Dispose();
             myConn.Close();
@@ -61,8 +73,8 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
-           //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+                    "VALUES ('" + utilP.nanilha + "', '" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "','" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+           
           SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
            newCommand.ExecuteNonQuery();
 
@@ -74,6 +86,7 @@ namespace OrniBest
             idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
             reader.Dispose();
             myConn.Close();
+            MessageBox.Show("Foi adicionado com sucesso!");
             return idUltimoRegisto;
 
 

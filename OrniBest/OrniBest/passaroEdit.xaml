@@ -9,7 +9,7 @@
       Title="Editar Pássaro" Background="White">
 
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="10,10,0,0" VerticalAlignment="Top" Width="267"/>
+        <ListBox x:Name="lb_pass" HorizontalAlignment="Left" Height="668" Margin="10,10,0,0" VerticalAlignment="Top" Width="267"/>
         <!-- Nome -->
         <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="303,75,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
