@@ -128,6 +128,22 @@ namespace OrniBest {
         #line default
         #line hidden
         
+        
+        #line 62 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Button btt_gaiola;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 64 "..\..\MainWindow.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image bird2;
+        
+        #line default
+        #line hidden
+        
         private bool _contentLoaded;
         
         /// <summary>
@@ -240,6 +256,18 @@ namespace OrniBest {
             return;
             case 12:
             this.bird1 = ((System.Windows.Controls.Image)(target));
+            return;
+            case 13:
+            this.btt_gaiola = ((System.Windows.Controls.Button)(target));
+            
+            #line 62 "..\..\MainWindow.xaml"
+            this.btt_gaiola.Click += new System.Windows.RoutedEventHandler(this.btt_competicoes_Click);
+            
+            #line default
+            #line hidden
+            return;
+            case 14:
+            this.bird2 = ((System.Windows.Controls.Image)(target));
             return;
             }
             this._contentLoaded = true;

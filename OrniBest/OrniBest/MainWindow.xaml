@@ -59,6 +59,12 @@
                     <Label Padding="0" Content="Competições" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
             </Button>
+            <Button x:Name="btt_gaiola" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,236,0,0" Background="#A0DAE4" Click="btt_competicoes_Click">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image x:Name="bird2" Height="49" Source="icon/trophy-40.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left" Opacity="40"/>
+                    <Label Padding="0" Content="Gaiola" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
+                </DockPanel>
+            </Button>
         </Grid>
     </Border>
 </Window>
