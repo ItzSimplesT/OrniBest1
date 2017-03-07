@@ -150,3 +150,9 @@ C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\ro\Xceed.Wpf.A
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarGaiola.g.cs
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\MenuGaiola.g.cs
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarGaiola.baml
+C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\MenuGaiola.baml

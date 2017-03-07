@@ -69,7 +69,7 @@ namespace OrniBest
 
         private void btt_competicoes_Click(object sender, RoutedEventArgs e)
         {
-
+            frame.Content = new MenuGaiola();
         }
     }
 }
