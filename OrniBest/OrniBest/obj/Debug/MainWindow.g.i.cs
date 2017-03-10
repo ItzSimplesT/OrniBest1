@@ -139,7 +139,7 @@ namespace OrniBest {
         
         #line 64 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image bird2;
+        internal System.Windows.Controls.Image cage;
         
         #line default
         #line hidden
@@ -267,7 +267,7 @@ namespace OrniBest {
             #line hidden
             return;
             case 14:
-            this.bird2 = ((System.Windows.Controls.Image)(target));
+            this.cage = ((System.Windows.Controls.Image)(target));
             return;
             }
             this._contentLoaded = true;
