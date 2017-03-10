@@ -10,29 +10,29 @@
 
     <Grid>
         <!-- Nome -->
-        <Label x:Name="lb_identificacao" Content="Identificação :" HorizontalAlignment="Left" Margin="143,63,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="lb_identificacao" Content="Identificação :" HorizontalAlignment="Left" Margin="523,61,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,63,540,0">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,61,160,0">
             <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Label x:Name="lb_nome_Copy" Content="Comprimento :" HorizontalAlignment="Left" Margin="146,133,0,0" VerticalAlignment="Top" Height="32" Width="133" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="lb_nome_Copy" Content="Comprimento :" HorizontalAlignment="Left" Margin="526,131,0,0" VerticalAlignment="Top" Height="32" Width="133" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,130,534,0">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,128,154,0">
             <TextBox x:Name="tb_nome1" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Label x:Name="lb_nome_Copy1" Content="Largura :" HorizontalAlignment="Left" Margin="145,207,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="lb_nome_Copy1" Content="Largura :" HorizontalAlignment="Left" Margin="525,205,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,205,534,0">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,203,154,0">
             <TextBox x:Name="tb_nome2" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Label x:Name="lb_nome_Copy2" Content="Altura :" HorizontalAlignment="Left" Margin="145,270,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="lb_nome_Copy2" Content="Altura :" HorizontalAlignment="Left" Margin="525,268,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,266,534,0">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,264,154,0">
             <TextBox x:Name="tb_nome3" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Label x:Name="lb_nome_Copy3" Content="Lotação :" HorizontalAlignment="Left" Margin="145,327,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
+        <Label x:Name="lb_nome_Copy3" Content="Lotação :" HorizontalAlignment="Left" Margin="525,325,0,0" VerticalAlignment="Top" Height="32" Width="117" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,325,534,0">
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,323,154,0">
             <TextBox x:Name="tb_nome4" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
         <Button x:Name="btt_adicionar" Content="" HorizontalAlignment="Left" Margin="892,553,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_adicionar_Click" >
@@ -46,7 +46,7 @@
                 <ImageBrush ImageSource="icon/Undo-64.png"/>
             </Button.Background>
         </Button>
-        <ListBox x:Name="lb_gaiola" HorizontalAlignment="Left" Height="408" Margin="619,63,0,0" VerticalAlignment="Top" Width="354" BorderBrush="Gray" BorderThickness="2"/>
+        <ListBox x:Name="lb_gaiola" HorizontalAlignment="Left" Height="605" Margin="31,27,0,0" VerticalAlignment="Top" Width="354" BorderBrush="Gray" BorderThickness="2"/>
 
     </Grid>
 </Page>
