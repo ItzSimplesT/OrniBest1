@@ -126,6 +126,9 @@
     <Compile Include="AdicionarGaiola.xaml.cs">
       <DependentUpon>AdicionarGaiola.xaml</DependentUpon>
     </Compile>
+    <Compile Include="DeleteGaiola.xaml.cs">
+      <DependentUpon>DeleteGaiola.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EditarGaiola.xaml.cs">
       <DependentUpon>EditarGaiola.xaml</DependentUpon>
     </Compile>
@@ -150,6 +153,10 @@
     </Compile>
     <Compile Include="utilizador2.cs" />
     <Page Include="AdicionarGaiola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteGaiola.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
