@@ -71,5 +71,10 @@ namespace OrniBest
         {
             frame.Content = new MenuGaiola();
         }
+
+        private void btt_Familia_Click(object sender, RoutedEventArgs e)
+        {
+            frame.Content = new familia();
+        }
     }
 }

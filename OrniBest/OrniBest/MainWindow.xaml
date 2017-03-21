@@ -65,6 +65,12 @@
                     <Label Padding="0" Content="Gaiola" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
             </Button>
+            <Button x:Name="btt_Familia" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,295,0,0" Background="#A0DAE4" Click="btt_Familia_Click">
+                <DockPanel HorizontalAlignment="Stretch">
+                    <Image x:Name="familia" Height="49" Source="icon/family.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left" Opacity="40"/>
+                    <Label Padding="0" Content="Família" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
+                </DockPanel>
+            </Button>
         </Grid>
     </Border>
 </Window>
