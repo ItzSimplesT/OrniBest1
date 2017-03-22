@@ -24,5 +24,16 @@ namespace OrniBest
         {
             InitializeComponent();
         }
+
+        private void btt_adicionar_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btt_Voltar_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("MenuGaiola.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
