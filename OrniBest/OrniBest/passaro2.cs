@@ -55,7 +55,7 @@ namespace OrniBest
                 catch (Exception)
                 {
 
-                    
+                    // string foto = "";
                 }
                 string alimento = (string)reader["alimento"];
                 long id_utilizador = (long)reader["id_utilizador"];

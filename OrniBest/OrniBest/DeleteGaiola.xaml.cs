@@ -16,22 +16,22 @@ using System.Windows.Shapes;
 namespace OrniBest
 {
     /// <summary>
-    /// Interaction logic for EditarGaiola.xaml
+    /// Interaction logic for DeleteGaiola.xaml
     /// </summary>
-    public partial class EditarGaiola : Page
+    public partial class DeleteGaiola : Page
     {
-        public EditarGaiola()
+        public DeleteGaiola()
         {
             InitializeComponent();
         }
 
-        private void btt_Voltar_Click(object sender, RoutedEventArgs e)
+        private void btt_Voltar2_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("MenuGaiola.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btt_adicionar_Click(object sender, RoutedEventArgs e)
+        private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
 
         }
