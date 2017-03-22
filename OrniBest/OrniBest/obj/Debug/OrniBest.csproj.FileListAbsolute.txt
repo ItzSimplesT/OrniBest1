@@ -156,8 +156,6 @@ C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarGaiol
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\MenuGaiola.baml
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteGaiola.g.cs
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarGaiola.g.cs
-C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.dll
-C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteGaiola.baml
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarGaiola.baml
 C:\Users\20250\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\familia.g.cs

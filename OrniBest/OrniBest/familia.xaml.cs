@@ -24,5 +24,10 @@ namespace OrniBest
         {
             InitializeComponent();
         }
+
+        private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
