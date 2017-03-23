@@ -13,13 +13,13 @@
             <ColumnDefinition Width="73*"/>
             <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="397,10,0,0" VerticalAlignment="Top" Width="303" Grid.Column="1" />
-        <Label x:Name="label" Content="Insira com o NºAnilha : " HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Height="32" Width="162" Grid.Column="1"/>
-        <Label x:Name="label1" Content="NºAnilha da Mãe" Grid.Column="1" HorizontalAlignment="Left" Margin="47,90,0,0" VerticalAlignment="Top" Height="35" Width="151"/>
-        <TextBox x:Name="textBox_Mae" Grid.Column="1" HorizontalAlignment="Left" Height="32" Margin="53,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181"/>
-        <Label x:Name="label1_Copy" Content="NºAnilha do Pai" Grid.Column="1" HorizontalAlignment="Left" Margin="47,196,0,0" VerticalAlignment="Top" Height="36" Width="142"/>
-        <TextBox x:Name="textBox_Pai" Grid.Column="1" HorizontalAlignment="Left" Height="31" Margin="53,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="181"/>
-        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="295,273,0,0" VerticalAlignment="Top" Width="75" Height="76" BorderThickness="4" Click="btt_pesquisar_Click" Grid.Column="1"  >
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="393,10,0,0" VerticalAlignment="Top" Width="303" Grid.Column="1" />
+        <Label x:Name="label" Content="Insira com o NºAnilha : " HorizontalAlignment="Left" Margin="130,57,0,0" VerticalAlignment="Top" Height="35" Width="178" Grid.ColumnSpan="2"/>
+        <Label x:Name="label1" Content="NºAnilha da Mãe" HorizontalAlignment="Left" Margin="171,97,0,0" VerticalAlignment="Top" Height="38" Width="165" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_Mae" HorizontalAlignment="Left" Height="35" Margin="177,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
+        <Label x:Name="label1_Copy" Content="NºAnilha do Pai" HorizontalAlignment="Left" Margin="171,213,0,0" VerticalAlignment="Top" Height="39" Width="156" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="textBox_Pai" HorizontalAlignment="Left" Height="33" Margin="177,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
+        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="151,297,0,0" VerticalAlignment="Top" Width="82" Height="82" BorderThickness="4" Click="btt_pesquisar_Click" Grid.Column="1"  >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Pesquisar-26.png"/>
             </Button.Background>

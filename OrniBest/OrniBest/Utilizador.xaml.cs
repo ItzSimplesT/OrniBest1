@@ -26,6 +26,9 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
+
+            Dictionary<int, utilizador2> u = utilizador2.lerRegistos();
+            u.
             
 
             
