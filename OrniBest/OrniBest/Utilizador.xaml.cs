@@ -27,8 +27,8 @@ namespace OrniBest
         {
             InitializeComponent();
 
-            Dictionary<int, utilizador2> u = utilizador2.lerRegistos();
-            u.
+            //Dictionary<int, utilizador2> u = utilizador2.lerRegistos();
+            //u.
             
 
             

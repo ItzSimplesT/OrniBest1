@@ -10,7 +10,7 @@ namespace OrniBest
 {
     class utilizador2
     {
-        private static Dictionary<int, utilizador2> util = new Dictionary<int, utilizador2>();
+        private static List<utilizador2> util = new List<utilizador2>();
         private string nome;
         private int telemovel;
         private int stam;
@@ -34,7 +34,7 @@ namespace OrniBest
 
         #region Base de Dados
 
-        public static Dictionary<int, utilizador2> lerRegistos()
+        public static List<utilizador2> lerRegistos()
         {
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
             myConn.Open();
@@ -47,7 +47,7 @@ namespace OrniBest
                                                 (int)reader["STAM"], (string)reader["data_nascimento"],
                                                 (string)reader["Morada"], (string)reader["cod_postal"],
                                                 (int)reader["id_clube"]);
-                util.Add(Convert.ToInt32(reader["id_Utilizador"]), newUtilizador);
+                util.Add(newUtilizador);
             }
             reader.Dispose();
             myConn.Close();

@@ -10,10 +10,10 @@ namespace OrniBest
 {
     class passaro2
     {
-        private static Dictionary<int, passaro2> utilP = new Dictionary<int, passaro2>();
-        private long nanilha;
+        private static List<passaro2> utilP = new List<passaro2>();
+        public long nanilha;
         private string genero;
-        private string nome;
+        public string nome;
         private string foto;
         private string Alimento;
         private long id_utilizador;
@@ -36,7 +36,7 @@ namespace OrniBest
 
         #region Base de Dados
 
-        public static Dictionary<int, passaro2> lerRegistos()
+        public static List<passaro2> lerRegistos()
         {
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
@@ -45,33 +45,27 @@ namespace OrniBest
             SQLiteDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
             {
-                long n_anilha = (long)reader["n_anilha"];
-                string genero = (string)reader["genero"];
-                string nome = (string)reader["nome"];
-                try
-                {
-                    string foto = (string)reader["foto"];
-                }
-                catch (Exception)
-                {
+                //long n_anilha = (long)reader["n_anilha"];
+                //string genero = (string)reader["genero"];
+                //string nome = (string)reader["nome"];
 
-                    // string foto = "";
-                }
-                string alimento = (string)reader["alimento"];
-                long id_utilizador = (long)reader["id_utilizador"];
-                long id_especie = (long)reader["id_especie"];
-                long id_gaiola = (long)reader["id_gaiola"];
-                CustomMessageBox.Show("fad");
+                //    string foto = (string)reader["foto"];
 
-                //passaro2 newPassaro = new passaro2((long)reader["n_anilha"], 
-                //                                    (string)reader["genero"],
-                //                                    (string)reader["nome"], 
-                //                                    (string)reader["foto"],
-                //                                    (string)reader["alimento"],
-                //                                    (long)reader["id_utilizador"],
-                //                                    (long)reader["id_especie"], 
-                //                                    (long)reader["id_gaiola"]);
-              //  utilP.Add(Convert.ToInt32(reader["id_Utilizador"]), newPassaro);
+                //string alimento = (string)reader["alimento"];
+                //long id_utilizador = (long)reader["id_utilizador"];
+                //long id_especie = (long)reader["id_especie"];
+                //long id_gaiola = (long)reader["id_gaiola"];
+
+
+                passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                                                    (string)reader["genero"],
+                                                    (string)reader["nome"],
+                                                    (string)reader["foto"],
+                                                    (string)reader["alimento"],
+                                                    (long)reader["id_utilizador"],
+                                                    (long)reader["id_especie"],
+                                                    (long)reader["id_gaiola"]);
+                utilP.Add(newPassaro);
             }
             reader.Dispose();
             myConn.Close();
