@@ -27,17 +27,24 @@ namespace OrniBest
             InitializeComponent();
             List<passaro2> utilP = new List<passaro2>();
             utilP = passaro2.lerRegistos();
-            
-
-            foreach (var x in utilP)
+            if (utilP.Count != 0)
             {
-                string mostrar = x.nanilha + "-" + x.nome;
-                
-                lb_pass.Items.Add(mostrar);
+                foreach (var x in utilP)
+                {
+                    string mostrar = x.nanilha + "-" + x.nome;
 
+                    lb_pass.Items.Add(mostrar);
+
+
+
+
+                }
             }
+
+            
+            
         }
-        
+       
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
         {
@@ -80,8 +87,44 @@ namespace OrniBest
 
         private void btt_Voltar1_Click(object sender, RoutedEventArgs e)
         {
+           
+            lb_pass.Items.Clear();
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("passaroMenu.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+          
+        }
+
+        private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
+        {
+            string nanilha = tb_nanilha.Text;
+            long nanilhaLong = Convert.ToInt64(nanilha);
+            List<passaro2> utilP = new List<passaro2>();
+            utilP = passaro2.lerRegistos();
+
+            foreach (var x in utilP)
+            {
+              
+                if(x.nanilha == nanilhaLong)
+                {
+                   tb_anilha.Text = x.nanilha.ToString();
+                    tb_nome.Text = x.nome.ToString();
+                    tb_genero.Text = x.genero.ToString();
+
+
+
+
+                }
+
+
+
+            }
+
+
         }
     }
 }

@@ -12,13 +12,14 @@ namespace OrniBest
     {
         private static List<passaro2> utilP = new List<passaro2>();
         public long nanilha;
-        private string genero;
+        public string genero;
         public string nome;
-        private string foto;
-        private string Alimento;
-        private long id_utilizador;
-        private long id_especie;
-        private long id_gaiola;
+        public string foto;
+        public string Alimento;
+        public long id_utilizador;
+        public long id_especie;
+        public long id_gaiola;
+
 
         public passaro2(long nanilha2, string genero2, string nome2, string foto2, string Alimento2, long id_utilizador2, long id_especie2, long id_gaiola2)
         {
@@ -43,6 +44,7 @@ namespace OrniBest
             string sql_select = "SELECT * FROM Passaro";
             SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
             SQLiteDataReader reader = myCommand.ExecuteReader();
+            utilP.Clear();
             while (reader.Read())
             {
                 //long n_anilha = (long)reader["n_anilha"];
@@ -94,7 +96,29 @@ namespace OrniBest
 
 
         }
-        
+        public static int UptadePassaro(passaro2 utilP)
+        {
+
+            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+            myConn.Open();
+            string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+
+            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+            newCommand.ExecuteNonQuery();
+
+            string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
+            SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
+            SQLiteDataReader reader = idCommando.ExecuteReader();
+            int idUltimoRegisto = 0;
+            reader.Read(); // Ler na Base de Dados
+            idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
+            reader.Dispose();
+            myConn.Close();
+            return idUltimoRegisto;
+
+
+        }
 
 
     }
