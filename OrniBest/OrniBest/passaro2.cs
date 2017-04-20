@@ -119,6 +119,18 @@ namespace OrniBest
 
 
         }
+        public static int DeletePassaro(passaro2 utilP)
+        {
+            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+            myConn.Open();
+            string sql_add = "DELETE INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+
+            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+            newCommand.ExecuteNonQuery();
+
+            return 1;
+        }
 
 
     }
