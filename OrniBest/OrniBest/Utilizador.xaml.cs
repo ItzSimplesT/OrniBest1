@@ -35,6 +35,7 @@ namespace OrniBest
                     string mostrar = x.id_clube + "-" + x.nome;
 
                     cb_clube.Items.Add(mostrar);
+                    
 
 
 
