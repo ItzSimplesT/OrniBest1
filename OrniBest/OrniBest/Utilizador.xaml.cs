@@ -26,12 +26,23 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
+            List<Clube2> utilP = new List<Clube2>();
+            utilP = Clube2.lerRegistos();
+            if (utilP.Count != 0)
+            {
+                foreach (var x in utilP)
+                {
+                    string mostrar = x.id_clube + "-" + x.nome;
 
-            //Dictionary<int, utilizador2> u = utilizador2.lerRegistos();
-            //u.
-            
+                    cb_clube.Items.Add(mostrar);
 
-            
+
+
+
+                }
+            }
+
+
         }
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)

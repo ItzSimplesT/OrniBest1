@@ -81,6 +81,7 @@
     <Compile Include="AdicionarGaiola.xaml.cs">
       <DependentUpon>AdicionarGaiola.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Clube2.cs" />
     <Compile Include="DeleteGaiola.xaml.cs">
       <DependentUpon>DeleteGaiola.xaml</DependentUpon>
     </Compile>

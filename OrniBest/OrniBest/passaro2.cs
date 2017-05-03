@@ -47,28 +47,27 @@ namespace OrniBest
             utilP.Clear();
             while (reader.Read())
             {
-                long n_anilha = (long)reader["n_anilha"];
-                string genero = (string)reader["genero"];
-                string nome = (string)reader["nome"];
+                //long n_anilha = (long)reader["n_anilha"];
+                //string genero = (string)reader["genero"];
+                //string nome = (string)reader["nome"];
 
-                //string foto = (string)reader["foto"];
+                ////string foto = (string)reader["foto"];
 
-                //string alimento = (string)reader["alimento"];
-                //long id_utilizador = (long)reader["id_utilizador"];
-                //long id_especie = (long)reader["id_especie"];
-                //long id_gaiola = (long)reader["id_gaiola"];
+                ////string alimento = (string)reader["alimento"];
+                ////long id_utilizador = (long)reader["id_utilizador"];
+                ////long id_especie = (long)reader["id_especie"];
+                ////long id_gaiola = (long)reader["id_gaiola"];
 
 
-                //passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
-                //                                    (string)reader["genero"],
-                //                                    (string)reader["nome"],
-                //                                    (string)reader["foto"],
-                //                                    //(string)reader["foto"],
-                //                                    (string)reader["alimento"],
-                //                                    (long)reader["id_utilizador"],
-                //                                    (long)reader["id_especie"],
-                //                                    (long)reader["id_gaiola"]);
-                //utilP.Add(newPassaro);
+                passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                                                    (string)reader["genero"],
+                                                    (string)reader["nome"],
+                                                    (string)reader["foto"],
+                                                    (string)reader["alimento"],
+                                                    (long)reader["id_utilizador"],
+                                                    (long)reader["id_especie"],
+                                                    (long)reader["id_gaiola"]);
+                utilP.Add(newPassaro);
             }
             reader.Dispose();
             myConn.Close();
@@ -120,12 +119,13 @@ namespace OrniBest
 
 
         }
-        public static int DeletePassaro(passaro2 utilP)
+        public static int DeletePassaro(passaro2 utilP, int n_anilhadelete)
         {
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "DELETE INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+            int anilhapagar = n_anilhadelete;
+            string sql_add = "DELETE FROM `passaro` WHERE " + anilhapagar; 
+          
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
