@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-using WPFCustomMessageBox;
+
 
 namespace OrniBest
 {
@@ -47,27 +47,28 @@ namespace OrniBest
             utilP.Clear();
             while (reader.Read())
             {
-                //long n_anilha = (long)reader["n_anilha"];
-                //string genero = (string)reader["genero"];
-                //string nome = (string)reader["nome"];
+                long n_anilha = (long)reader["n_anilha"];
+                string genero = (string)reader["genero"];
+                string nome = (string)reader["nome"];
 
-                //    string foto = (string)reader["foto"];
+                string foto = (string)reader["foto"];
 
-                //string alimento = (string)reader["alimento"];
-                //long id_utilizador = (long)reader["id_utilizador"];
-                //long id_especie = (long)reader["id_especie"];
-                //long id_gaiola = (long)reader["id_gaiola"];
+                string alimento = (string)reader["alimento"];
+                long id_utilizador = (long)reader["id_utilizador"];
+                long id_especie = (long)reader["id_especie"];
+                long id_gaiola = (long)reader["id_gaiola"];
 
 
-                passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
-                                                    (string)reader["genero"],
-                                                    (string)reader["nome"],
-                                                    (string)reader["foto"],
-                                                    (string)reader["alimento"],
-                                                    (long)reader["id_utilizador"],
-                                                    (long)reader["id_especie"],
-                                                    (long)reader["id_gaiola"]);
-                utilP.Add(newPassaro);
+                //passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                //                                    (string)reader["genero"],
+                //                                    (string)reader["nome"],
+                //                                    (string)reader["foto"],
+                //                                    //(string)reader["foto"],
+                //                                    (string)reader["alimento"],
+                //                                    (long)reader["id_utilizador"],
+                //                                    (long)reader["id_especie"],
+                //                                    (long)reader["id_gaiola"]);
+                //utilP.Add(newPassaro);
             }
             reader.Dispose();
             myConn.Close();

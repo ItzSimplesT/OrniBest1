@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\
 OrniBest
 none
 false
 DEBUG;TRACE
-C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\App.xaml
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\App.xaml
 12-1399669411
 
 18-742849629
-281107684
+20-2000266634
 AdicionarGaiola.xaml;DeleteGaiola.xaml;EditarGaiola.xaml;familia.xaml;MainWindow.xaml;MenuGaiola.xaml;PageInicial.xaml;passaro.xaml;passaroDelete.xaml;passaroEdit.xaml;passaroMenu.xaml;Utilizador.xaml;
 
-False
+True
 
