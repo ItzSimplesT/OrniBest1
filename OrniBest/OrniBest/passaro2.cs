@@ -51,12 +51,12 @@ namespace OrniBest
                 string genero = (string)reader["genero"];
                 string nome = (string)reader["nome"];
 
-                string foto = (string)reader["foto"];
+                //string foto = (string)reader["foto"];
 
-                string alimento = (string)reader["alimento"];
-                long id_utilizador = (long)reader["id_utilizador"];
-                long id_especie = (long)reader["id_especie"];
-                long id_gaiola = (long)reader["id_gaiola"];
+                //string alimento = (string)reader["alimento"];
+                //long id_utilizador = (long)reader["id_utilizador"];
+                //long id_especie = (long)reader["id_especie"];
+                //long id_gaiola = (long)reader["id_gaiola"];
 
 
                 //passaro2 newPassaro = new passaro2((long)reader["n_anilha"],

@@ -19,7 +19,7 @@
         <TextBox x:Name="textBox_Mae" HorizontalAlignment="Left" Height="35" Margin="177,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
         <Label x:Name="label1_Copy" Content="NºAnilha do Pai" HorizontalAlignment="Left" Margin="171,213,0,0" VerticalAlignment="Top" Height="39" Width="156" Grid.ColumnSpan="2"/>
         <TextBox x:Name="textBox_Pai" HorizontalAlignment="Left" Height="33" Margin="177,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
-        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="151,297,0,0" VerticalAlignment="Top" Width="82" Height="82" BorderThickness="4" Click="btt_pesquisar_Click" Grid.Column="1"  >
+        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="134,246,0,0" VerticalAlignment="Top" Width="53" Height="47" BorderThickness="2" Click="btt_pesquisar_Click" Grid.Column="1"  >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Pesquisar-26.png"/>
             </Button.Background>
