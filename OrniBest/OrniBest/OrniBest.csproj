@@ -88,6 +88,7 @@
     <Compile Include="EditarGaiola.xaml.cs">
       <DependentUpon>EditarGaiola.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Especie.cs" />
     <Compile Include="familia.xaml.cs">
       <DependentUpon>familia.xaml</DependentUpon>
     </Compile>

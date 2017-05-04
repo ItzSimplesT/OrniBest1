@@ -42,21 +42,24 @@ namespace OrniBest
 
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
-           // var res = Xceed.Wpf.Toolkit.MessageBox.Show(
-             ///              "Tens a certeza que quer apagar?",
-                //           "Atenção",
-                  //         MessageBoxButton.YesNoCancel,
-                    //       MessageBoxImage.None,
-                      //     (Style)Resources["MessageBoxStyle1"]
-                    //   );
+            int n_anilhapagar = Convert.ToInt32(tb_n_anilha.Text);
+            passaro2.DeletePassaro(n_anilhapagar);
+            lb_pass.Items.Clear();
+            List<passaro2> utilP = new List<passaro2>();
+            utilP = passaro2.lerRegistos();
+            if (utilP.Count != 0)
+            {
+                foreach (var x in utilP)
+                {
+                    string mostrar = x.nanilha + "-" + x.nome;
+
+                    lb_pass.Items.Add(mostrar);
 
 
-//            if ("No" == res.ToString())
-  //          {
-    //        }
-      //      if ("Yes" == res.ToString())
-        //    {
-         //   }
+
+
+                }
+            }
 
         }
 

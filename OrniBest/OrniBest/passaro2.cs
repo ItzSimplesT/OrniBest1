@@ -12,6 +12,8 @@ namespace OrniBest
     {
         private static List<passaro2> utilP = new List<passaro2>();
         public long nanilha;
+        public long nanilhamae;
+        public long nanilhapai;
         public string genero;
         public string nome;
         public string foto;
@@ -21,9 +23,11 @@ namespace OrniBest
         public long id_gaiola;
 
 
-        public passaro2(long nanilha2, string genero2, string nome2, string foto2, string Alimento2, long id_utilizador2, long id_especie2, long id_gaiola2)
+        public passaro2(long nanilha2, long nanilhamae2, long nanilhapai2, string genero2, string nome2, string foto2, string Alimento2, long id_utilizador2, long id_especie2, long id_gaiola2)
         {
             this.nanilha = nanilha2;
+            this.nanilhamae = nanilhamae2;
+            this.nanilhapai = nanilhapai2;
             this.genero = genero2;
             this.nome = nome2;
             this.foto = foto2;
@@ -47,19 +51,10 @@ namespace OrniBest
             utilP.Clear();
             while (reader.Read())
             {
-                //long n_anilha = (long)reader["n_anilha"];
-                //string genero = (string)reader["genero"];
-                //string nome = (string)reader["nome"];
-
-                ////string foto = (string)reader["foto"];
-
-                ////string alimento = (string)reader["alimento"];
-                ////long id_utilizador = (long)reader["id_utilizador"];
-                ////long id_especie = (long)reader["id_especie"];
-                ////long id_gaiola = (long)reader["id_gaiola"];
-
 
                 passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                                                    (long)reader["n_anilhamae"],
+                                                    (long)reader["n_anilhapai"],
                                                     (string)reader["genero"],
                                                     (string)reader["nome"],
                                                     (string)reader["foto"],
@@ -78,10 +73,10 @@ namespace OrniBest
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
-           //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
-          SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+            string sql_add = "INSERT INTO Passaro(n_anilha,n_anilhamae,n_anilhapai,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+                    "VALUES (" + utilP.nanilha + "," + utilP.nanilhamae + "," + utilP.nanilhapai + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_especie + " ) ";
+            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
            newCommand.ExecuteNonQuery();
 
             string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
@@ -102,7 +97,7 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES ('" + utilP.nanilha + "'," + utilP.genero + "," + utilP.nome + ", " + utilP.foto + "," + utilP.Alimento + ",'" + utilP.id_utilizador + "' , '" + utilP.id_especie + "' , '" + utilP.id_especie + "' ) ";
+                    "VALUES (" + utilP.nanilha + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_especie + " ) ";
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
@@ -119,12 +114,12 @@ namespace OrniBest
 
 
         }
-        public static int DeletePassaro(passaro2 utilP, int n_anilhadelete)
+        public static int DeletePassaro(int n_anilhadelete)
         {
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             int anilhapagar = n_anilhadelete;
-            string sql_add = "DELETE FROM `passaro` WHERE " + anilhapagar; 
+            string sql_add = "DELETE FROM `passaro` WHERE n_anilha= " + anilhapagar; 
           
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);

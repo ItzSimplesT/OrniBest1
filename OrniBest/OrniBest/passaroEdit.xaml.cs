@@ -40,11 +40,26 @@ namespace OrniBest
 
                 }
             }
+            List<Especie> utilE = new List<Especie>();
+            utilE = Especie.lerRegistos();
+            if (utilE.Count != 0)
+            {
+                foreach (var x in utilE)
+                {
+                    string mostrar = x.id_especie + "-" + x.nome;
 
-            
-            
+                    cb_especie.Items.Add(mostrar);
+
+
+
+
+                }
+            }
+
+
+
         }
-       
+
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
         {
