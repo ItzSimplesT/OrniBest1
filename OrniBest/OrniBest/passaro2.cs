@@ -52,17 +52,17 @@ namespace OrniBest
             while (reader.Read())
             {
 
-                //passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
-                //                                    //(long)reader["n_anilhamae"],
-                //                                    //(long)reader["n_anilhapai"],
-                //                                    (string)reader["genero"],
-                //                                    (string)reader["nome"],
-                //                                    (string)reader["foto"],
-                //                                    (string)reader["alimento"],
-                //                                    (long)reader["id_utilizador"],
-                //                                    (long)reader["id_especie"],
-                //                                    (long)reader["id_gaiola"]);
-                //utilP.Add(newPassaro);
+                passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                                                    (long)reader["n_anilhamae"],
+                                                    (long)reader["n_anilhapai"],
+                                                    (string)reader["genero"],
+                                                    (string)reader["nome"],
+                                                    (string)reader["foto"],
+                                                    (string)reader["alimento"],
+                                                    (long)reader["id_utilizador"],
+                                                    (long)reader["id_especie"],
+                                                    (long)reader["id_gaiola"]);
+                utilP.Add(newPassaro);
             }
             reader.Dispose();
             myConn.Close();

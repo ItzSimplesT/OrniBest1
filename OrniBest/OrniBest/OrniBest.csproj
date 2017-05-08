@@ -92,6 +92,7 @@
     <Compile Include="familia.xaml.cs">
       <DependentUpon>familia.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Gaiola2.cs" />
     <Compile Include="MenuGaiola.xaml.cs">
       <DependentUpon>MenuGaiola.xaml</DependentUpon>
     </Compile>

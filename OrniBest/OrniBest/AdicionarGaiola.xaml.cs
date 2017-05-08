@@ -25,17 +25,18 @@ namespace OrniBest
             InitializeComponent();
         }
 
-        private void btt_adicionar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)
         {
 
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("MenuGaiola.xaml", UriKind.RelativeOrAbsolute));
 
+        }
+
+        private void btt_adicionargaiola_Click(object sender, RoutedEventArgs e)
+        {
+            Gaiola2 registo = new Gaiola2(System.Convert.ToInt32(tb_codgaiola.Text), System.Convert.ToInt32(tb_lotacao.Text), System.Convert.ToInt32(tb_comprimento.Text), System.Convert.ToInt32(tb_largura.Text), System.Convert.ToInt32(tb_altura.Text));
+            Gaiola2.AddRegistos(registo);
         }
     }
 }

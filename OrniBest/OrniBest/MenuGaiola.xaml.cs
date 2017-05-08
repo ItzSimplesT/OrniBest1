@@ -30,5 +30,17 @@ namespace OrniBest
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("AdicionarGaiola.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void btt_EditarGaiola_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("EditarGaiola.xaml", UriKind.RelativeOrAbsolute));
+        }
+
+        private void btt_RemoverGaiola_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("DeleteGaiola.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
