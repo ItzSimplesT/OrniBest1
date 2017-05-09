@@ -23,6 +23,22 @@ namespace OrniBest
         public DeleteGaiola()
         {
             InitializeComponent();
+            List<Gaiola2> utilG = new List<Gaiola2>();
+            utilG = Gaiola2.lerRegistos();
+            if (utilG.Count != 0)
+            {
+                foreach (var x in utilG)
+                {
+                    string mostrar = x.codgaiola.ToString();
+
+                    lb_gaiola.Items.Add(mostrar);
+
+
+
+
+                }
+            }
+
         }
 
         private void btt_Voltar2_Click(object sender, RoutedEventArgs e)
@@ -33,7 +49,24 @@ namespace OrniBest
 
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
+            int codgaiola = Convert.ToInt32(tb_codgaiola.Text);
+            passaro2.DeletePassaro(codgaiola);
+            lb_gaiola.Items.Clear();
+            List<Gaiola2> utilG = new List<Gaiola2>();
+            utilG = Gaiola2.lerRegistos();
+            if (utilG.Count != 0)
+            {
+                foreach (var x in utilG)
+                {
+                    string mostrar = x.codgaiola.ToString();
 
+                    lb_gaiola.Items.Add(mostrar);
+
+
+
+
+                }
+            }
         }
     }
 }

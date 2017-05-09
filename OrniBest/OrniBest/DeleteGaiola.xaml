@@ -9,11 +9,11 @@
       Title="Apagar Gaiola" Background="White">
 
     <Grid>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="635" Margin="10,43,0,0" VerticalAlignment="Top" Width="267"/>
+        <ListBox x:Name="lb_gaiola" HorizontalAlignment="Left" Height="635" Margin="10,43,0,0" VerticalAlignment="Top" Width="267"/>
         <Label x:Name="lb_id" Content="Introduza o id da gaiola :" HorizontalAlignment="Left" Margin="353,71,0,0" VerticalAlignment="Top" Height="32" Width="247" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,71,235,0">
-            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            <TextBox x:Name="tb_codgaiola" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
         <Button x:Name="btt_deletef" Content="" HorizontalAlignment="Left" Margin="879,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_deletef_Click" >
             <Button.Background>
@@ -22,7 +22,7 @@
         </Button>
         <Label x:Name="label" Content="Sabe que ao apagar uma gaiola, não vai conseguir recuperar mais esta. ATENÇÃO" HorizontalAlignment="Left" Margin="353,125,0,0" VerticalAlignment="Top"/>
         <Label x:Name="label1" Content="ID -" HorizontalAlignment="Left" Margin="10,17,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label2" Content="NºGaiola " HorizontalAlignment="Left" Margin="61,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.057,0.537"/>
+        <Label x:Name="label2" Content="Gaiola " HorizontalAlignment="Left" Margin="61,17,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.057,0.537"/>
         <Button x:Name="btt_Voltar2" Content="" HorizontalAlignment="Left" Margin="793,559,0,0" VerticalAlignment="Top" Width="81" Height="79" BorderThickness="4" Click="btt_Voltar2_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Undo-64.png"/>

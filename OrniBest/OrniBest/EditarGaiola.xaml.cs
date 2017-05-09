@@ -23,6 +23,21 @@ namespace OrniBest
         public EditarGaiola()
         {
             InitializeComponent();
+            List<Gaiola2> utilG = new List<Gaiola2>();
+            utilG = Gaiola2.lerRegistos();
+            if (utilG.Count != 0)
+            {
+                foreach (var x in utilG)
+                {
+                    string mostrar = x.codgaiola.ToString();
+
+                    lb_gaiola.Items.Add(mostrar);
+
+
+
+
+                }
+            }
         }
 
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)

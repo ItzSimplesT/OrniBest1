@@ -60,7 +60,7 @@ namespace OrniBest
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "INSERT INTO `gaiola`(`cod_gaiola`, `lotacao`, `comprimento`, `largura`, `altura`)" + "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + ",'" + utilG.largura + "','" + utilG.altura + "' ) ";
+            string sql_add = "INSERT INTO `gaiola`(`cod_gaiola`, `lotacao`, `comprimento`, `largura`, `altura`)" + "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + "," + utilG.largura + "," + utilG.altura + " ) ";
             
  
             //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
@@ -85,7 +85,7 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                     "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + ",'" + utilG.largura + "','" + utilG.altura + "' ) ";
+                     "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + "," + utilG.largura + "," + utilG.altura + " ) ";
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
