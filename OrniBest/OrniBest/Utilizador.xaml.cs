@@ -43,6 +43,30 @@ namespace OrniBest
                 }
             }
 
+            List<utilizador2> utilU = new List<utilizador2>();
+            utilU = utilizador2.lerRegistos();
+            if (utilU.Count != 0)
+            {
+                foreach (var x in utilU)
+                {
+                    tb_nome.Text = x.nome;
+                    tb_morada.Text = x.morada;
+                    tb_STAM.Text = x.stam.ToString();
+                    tb_telemovel.Text = x.telemovel.ToString();
+                    tb_codigopostal.Text = x.codigo_postal.ToString();
+                    data_nascimento.Text = x.data_nascimento.ToString();
+                    
+
+
+
+                    
+
+
+
+
+
+                }
+            }
 
         }
 

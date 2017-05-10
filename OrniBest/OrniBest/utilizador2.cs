@@ -11,15 +11,15 @@ namespace OrniBest
     class utilizador2
     {
         private static List<utilizador2> util = new List<utilizador2>();
-        private string nome;
-        private int telemovel;
-        private int stam;
-        private string data_nascimento;
-        private string morada;
-        private string codigo_postal;
-        private int clube;
+        public string nome;
+        public long telemovel;
+        public long stam;
+        public string data_nascimento;
+        public string morada;
+        public string codigo_postal;
+        public long clube;
 
-        public utilizador2(string nome2, int telemovel2, int stam2, string data_nascimento2, string morada2, string codigo_postal2, int clube2)
+        public utilizador2(string nome2, long telemovel2, long stam2, string data_nascimento2, string morada2, string codigo_postal2, long clube2)
         {
             this.nome = nome2;
             this.telemovel = telemovel2;
@@ -36,17 +36,17 @@ namespace OrniBest
 
         public static List<utilizador2> lerRegistos()
         {
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1;version=3");
+            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_select = "SELECT * FROM Utilizador";
             SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
             SQLiteDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
             {
-                utilizador2 newUtilizador = new utilizador2((string)reader["nome"], (int)reader["telemovel"],
-                                                (int)reader["STAM"], (string)reader["data_nascimento"],
+                utilizador2 newUtilizador = new utilizador2((string)reader["nome"], (long)reader["telemovel"],
+                                                (long)reader["STAM"], (string)reader["data_nascimento"],
                                                 (string)reader["Morada"], (string)reader["cod_postal"],
-                                                (int)reader["id_clube"]);
+                                                (long)reader["id_clube"]);
                 util.Add(newUtilizador);
             }
             reader.Dispose();

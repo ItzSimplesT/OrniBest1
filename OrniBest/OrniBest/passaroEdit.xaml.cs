@@ -129,7 +129,9 @@ namespace OrniBest
                    tb_anilha.Text = x.nanilha.ToString();
                     tb_nome.Text = x.nome.ToString();
                     tb_genero.Text = x.genero.ToString();
-
+                    tb_alimento.Text = x.Alimento.ToString();
+                    tb_anilhamae.Text = x.nanilhamae.ToString();
+                    tb_anilhapai.Text = x.nanilhapai.ToString();
 
 
 
