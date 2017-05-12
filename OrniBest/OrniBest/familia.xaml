@@ -13,17 +13,23 @@
             <ColumnDefinition Width="73*"/>
             <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="668" Margin="393,10,0,0" VerticalAlignment="Top" Width="303" Grid.Column="1" />
+        <ListBox x:Name="lb_pass" HorizontalAlignment="Left" Height="668" Margin="393,10,0,0" VerticalAlignment="Top" Width="303" Grid.Column="1" />
         <Label x:Name="label" Content="Insira com o NºAnilha : " HorizontalAlignment="Left" Margin="130,57,0,0" VerticalAlignment="Top" Height="35" Width="178" Grid.ColumnSpan="2"/>
         <Label x:Name="label1" Content="NºAnilha da Mãe" HorizontalAlignment="Left" Margin="171,97,0,0" VerticalAlignment="Top" Height="38" Width="165" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox_Mae" HorizontalAlignment="Left" Height="35" Margin="177,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
         <Label x:Name="label1_Copy" Content="NºAnilha do Pai" HorizontalAlignment="Left" Margin="171,213,0,0" VerticalAlignment="Top" Height="39" Width="156" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="textBox_Pai" HorizontalAlignment="Left" Height="33" Margin="177,260,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="199" Grid.ColumnSpan="2"/>
         <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="134,246,0,0" VerticalAlignment="Top" Width="53" Height="47" BorderThickness="2" Click="btt_pesquisar_Click" Grid.Column="1"  >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Pesquisar-26.png"/>
             </Button.Background>
         </Button>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,136,640,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_anilhamae" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
+        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
+            HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,258,639,0" Grid.ColumnSpan="2">
+            <TextBox x:Name="tb_anilhapai" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+        </Border>
 
 
         <!-- Nome -->

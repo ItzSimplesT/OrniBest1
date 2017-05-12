@@ -27,6 +27,77 @@ namespace OrniBest
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
+            List<passaro2> utilP = new List<passaro2>();
+            utilP = passaro2.lerRegistos();
+            if(tb_anilhamae.Text != "" && tb_anilhapai.Text != "")
+            {
+                if (utilP.Count != 0)
+                {
+                    foreach (var x in utilP)
+                    {
+                        if (tb_anilhamae.Text == x.nanilhamae.ToString() && tb_anilhapai.Text == x.nanilhapai.ToString())
+                        {
+                            string mostrar = x.nanilha + "-" + x.nome;
+                            lb_pass.Items.Add(mostrar);
+
+
+                        }   
+                        else
+                        {
+
+                            MessageBox.Show("Não encontramos na base dados a anilha que procura!");
+
+                        }
+                    }
+                }
+
+            }
+            else if (tb_anilhamae.Text != "" && tb_anilhapai.Text == "")
+            {
+                if (utilP.Count != 0)
+                {
+                    foreach (var x in utilP)
+                    {
+                        if (tb_anilhamae.Text == x.nanilhamae.ToString())
+                        {
+                            string mostrar = x.nanilha + "-" + x.nome;
+                            lb_pass.Items.Add(mostrar);
+
+
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Não encontramos na base dados a anilha que procura!");
+
+                        }
+                    }
+                }
+
+            }
+            else if (tb_anilhamae.Text == "" && tb_anilhapai.Text != "")
+            {
+                if (utilP.Count != 0)
+                {
+                    foreach (var x in utilP)
+                    {
+                        if (tb_anilhapai.Text == x.nanilhapai.ToString())
+                        {
+                            string mostrar = x.nanilha + "-" + x.nome;
+                            lb_pass.Items.Add(mostrar);
+
+
+                        }
+                        else
+                        {
+
+                            MessageBox.Show("Não encontramos na base dados a anilha que procura!");
+
+                        }
+                    }
+                }
+
+            }
 
         }
     }
