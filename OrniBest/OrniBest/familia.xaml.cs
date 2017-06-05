@@ -29,50 +29,61 @@ namespace OrniBest
         {
             List<passaro2> utilP = new List<passaro2>();
             utilP = passaro2.lerRegistos();
-            if(tb_anilhamae.Text != "" && tb_anilhapai.Text != "")
+            lb_pass.Items.Clear();
+            if (tb_anilhamae.Text != "" && tb_anilhapai.Text != "")
             {
                 if (utilP.Count != 0)
                 {
                     foreach (var x in utilP)
                     {
-                        if (tb_anilhamae.Text == x.nanilhamae.ToString() && tb_anilhapai.Text == x.nanilhapai.ToString())
+                        long xanilhamae = x.nanilhamae;
+                        long xanilhapai = x.nanilhapai;
+                        Boolean a = tb_anilhamae.Text.ToString().Trim() == x.nanilhamae.ToString();
+                        Boolean b = tb_anilhapai.Text.ToString().Trim() == x.nanilhapai.ToString();
+                        if (tb_anilhamae.Text.ToString().Trim() == x.nanilhamae.ToString() && tb_anilhapai.Text.ToString().Trim() == x.nanilhapai.ToString())
                         {
                             string mostrar = x.nanilha + "-" + x.nome;
                             lb_pass.Items.Add(mostrar);
 
 
-                        }   
-                        else
-                        {
-
-                            MessageBox.Show("Não encontramos na base dados a anilha que procura!");
-
                         }
+
+
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Não encontramos na base dados a anilha que procura!");
+
+                }
+
+
 
             }
+
+
             else if (tb_anilhamae.Text != "" && tb_anilhapai.Text == "")
             {
                 if (utilP.Count != 0)
                 {
                     foreach (var x in utilP)
                     {
-                        if (tb_anilhamae.Text == x.nanilhamae.ToString())
+                        if (tb_anilhamae.Text.ToString().Trim() == x.nanilhamae.ToString())
                         {
                             string mostrar = x.nanilha + "-" + x.nome;
                             lb_pass.Items.Add(mostrar);
 
 
                         }
-                        else
+                        
+                    }
+                }
+                else
                         {
 
                             MessageBox.Show("Não encontramos na base dados a anilha que procura!");
 
                         }
-                    }
-                }
 
             }
             else if (tb_anilhamae.Text == "" && tb_anilhapai.Text != "")
@@ -81,20 +92,21 @@ namespace OrniBest
                 {
                     foreach (var x in utilP)
                     {
-                        if (tb_anilhapai.Text == x.nanilhapai.ToString())
+                        if (tb_anilhapai.Text.ToString().Trim() == x.nanilhapai.ToString())
                         {
                             string mostrar = x.nanilha + "-" + x.nome;
                             lb_pass.Items.Add(mostrar);
 
 
                         }
-                        else
-                        {
-
-                            MessageBox.Show("Não encontramos na base dados a anilha que procura!");
-
-                        }
+                        
                     }
+                }
+                else
+                {
+
+                    MessageBox.Show("Não encontramos na base dados a anilha que procura!");
+
                 }
 
             }
@@ -102,3 +114,5 @@ namespace OrniBest
         }
     }
 }
+
+

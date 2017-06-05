@@ -125,7 +125,7 @@ namespace OrniBest
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
 
-            return 1;
+            return 1; 
         }
 
 

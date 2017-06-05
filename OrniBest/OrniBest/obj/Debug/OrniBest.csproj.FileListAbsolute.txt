@@ -242,3 +242,5 @@ C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramewo
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.xml
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Competicoes.g.cs
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Competicoes.baml

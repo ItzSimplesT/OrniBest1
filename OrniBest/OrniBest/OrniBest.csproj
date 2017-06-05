@@ -82,6 +82,10 @@
       <DependentUpon>AdicionarGaiola.xaml</DependentUpon>
     </Compile>
     <Compile Include="Clube2.cs" />
+    <Compile Include="competicoes2.cs" />
+    <Compile Include="Competicoes.xaml.cs">
+      <DependentUpon>Competicoes.xaml</DependentUpon>
+    </Compile>
     <Compile Include="DeleteGaiola.xaml.cs">
       <DependentUpon>DeleteGaiola.xaml</DependentUpon>
     </Compile>
@@ -114,6 +118,10 @@
     </Compile>
     <Compile Include="utilizador2.cs" />
     <Page Include="AdicionarGaiola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Competicoes.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -283,6 +291,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon\Trophy-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon\Help-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.105.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.105.0\build\net46\System.Data.SQLite.Core.targets')" />
