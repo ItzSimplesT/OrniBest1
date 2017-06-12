@@ -55,6 +55,22 @@ namespace OrniBest
 
                 }
             }
+            List<Gaiola2> UtilG = new List<Gaiola2>();
+            UtilG = Gaiola2.lerRegistos();
+            if (UtilG.Count != 0)
+            {
+                foreach (var x in UtilG)
+                {
+                    string mostrar = x.codgaiola.ToString();
+
+                    cb_gaiola.Items.Add(mostrar);
+
+
+
+
+                }
+            }
+
 
 
 
@@ -97,7 +113,25 @@ namespace OrniBest
         
         private void btt_save_Click(object sender, RoutedEventArgs e)
         {
+            int especie = cb_especie.SelectedIndex;
+            int id_gaiola = cb_gaiola.SelectedIndex;
+            int id_utilizador = 1;
+            string sexo;
+            string foto = "aindan";
+            if (macho.IsChecked == true)
+            {
+                sexo = "macho";
+                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, id_gaiola);
+                passaro2.UptadePassaro(registo, System.Convert.ToInt64(tb_anilha.Text));
+                
 
+            }
+            else if (femea.IsChecked == true)
+            {
+                sexo = "femea";
+                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, id_gaiola);
+                passaro2.UptadePassaro(registo, System.Convert.ToInt64(tb_anilha.Text));
+            }
         }
 
         private void btt_Voltar1_Click(object sender, RoutedEventArgs e)
@@ -116,7 +150,7 @@ namespace OrniBest
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
-            string nanilha = tb_nanilha.Text;
+            string nanilha = tb_nanilha2.Text;
             long nanilhaLong = Convert.ToInt64(nanilha);
             List<passaro2> utilP = new List<passaro2>();
             utilP = passaro2.lerRegistos();
@@ -127,8 +161,7 @@ namespace OrniBest
                 if(x.nanilha == nanilhaLong)
                 {
                    tb_anilha.Text = x.nanilha.ToString();
-                    tb_nome.Text = x.nome.ToString();
-                    tb_genero.Text = x.genero.ToString();
+                    tb_nome.Text = x.nome.ToString();                   
                     tb_alimento.Text = x.Alimento.ToString();
                     tb_anilhamae.Text = x.nanilhamae.ToString();
                     tb_anilhapai.Text = x.nanilhapai.ToString();

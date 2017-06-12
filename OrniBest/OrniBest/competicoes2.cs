@@ -4,6 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace OrniBest
 {
@@ -57,19 +66,19 @@ namespace OrniBest
                 myConn.Close();
                 return utilC;
             }
-            public static int AddRegistos(competicoes2 utilG)
+            public static int AddRegistos(competicoes2 utilC)
             {
 
                 SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
                 myConn.Open();
-                string sql_add = "INSERT INTO `Exposicao`(`cod_gaiola`, `lotacao`, `comprimento`, `largura`, `altura`)" + "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + "," + utilG.largura + "," + utilG.altura + " ) ";
+                string sql_add = "INSERT INTO `Exposicao`(`id_exposicao`, `nome`, `data`, `localicao`, `morada`)" + "VALUES (" + utilC.id_exposicao + "," + utilC.nome + "," + utilC.data + "," + utilC.cidade + "," + utilC.morada + " ) ";
 
 
                 //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
                 SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
                 newCommand.ExecuteNonQuery();
 
-                string sql_id = "SELECT MAX(cod_gaiola) as idAtual FROM Gaiola ";
+                string sql_id = "SELECT MAX(id_exposicao) as idAtual FROM Exposicao ";
                 SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
                 SQLiteDataReader reader = idCommando.ExecuteReader();
                 int idUltimoRegisto = 0;
@@ -77,22 +86,24 @@ namespace OrniBest
                 idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
                 reader.Dispose();
                 myConn.Close();
+                MessageBox.Show("Adicionado com sucesso!");
                 return idUltimoRegisto;
 
 
             }
-            public static int UptadePassaro(competicoes2 utilG)
+            public static int UptadeExposicao(competicoes2 utilC)
             {
 
                 SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
                 myConn.Open();
-                string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                         "VALUES (" + utilG.codgaiola + "," + utilG.lotacao + "," + utilG.comprimento + "," + utilG.largura + "," + utilG.altura + " ) ";
+                string sql_add = "UPDATE `exposicao` SET `nome`= '" + utilC.nome + "', `data`= '" +utilC.data + "',`localizacao`= '"  + utilC.cidade + "',`morada`= '" + utilC.morada + "' WHERE `id_exposicao`=" + utilC.id_exposicao;
+
+
 
                 SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
                 newCommand.ExecuteNonQuery();
 
-                string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
+                string sql_id = "SELECT MAX(id_exposicao) as idAtual FROM Exposicao ";
                 SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
                 SQLiteDataReader reader = idCommando.ExecuteReader();
                 int idUltimoRegisto = 0;
@@ -100,22 +111,23 @@ namespace OrniBest
                 idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
                 reader.Dispose();
                 myConn.Close();
+                MessageBox.Show("Adicionado com sucesso!");
                 return idUltimoRegisto;
 
 
             }
-            public static int DeletePassaro(int cod_gaioladelete)
+            public static int DeleteExposicao(int id_exposicao)
             {
                 SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
                 myConn.Open();
-                int gaiolapagar = cod_gaioladelete;
-                string sql_add = "DELETE FROM `Gaiola` WHERE cod_gaiola= " + gaiolapagar;
+                int exposicaoapagar = id_exposicao;
+                string sql_add = "DELETE FROM `Exposicao` WHERE id_exposicao= " + exposicaoapagar;
+                
 
-
-                SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
                 newCommand.ExecuteNonQuery();
-
-                return 1;
+            MessageBox.Show("Removido com sucesso!");
+            return 1;
             }
 
 

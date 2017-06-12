@@ -18,10 +18,6 @@
         </Border>
         <!-- Genero -->
         <Label x:Name="lb_genero" Content="Genero :" HorizontalAlignment="Left" Margin="304,141,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
-        <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
-        HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,141,420,0">
-            <TextBox x:Name="tb_genero" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
-        </Border>
         <!-- NºAnilha -->
         <Label x:Name="lb_anilha" Content="Nº Anilha:" HorizontalAlignment="Left" Margin="302,203,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
@@ -57,7 +53,7 @@
         </Label>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,10,544,0">
-            <TextBox x:Name="tb_nanilha" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            <TextBox x:Name="tb_nanilha2" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
         <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="495,10,0,0" VerticalAlignment="Top" Width="31" Height="32" BorderThickness="4" Click="btt_pesquisar_Click" ToolTip="Ao introduzir o numero da anilha só ira aparecer esse passáro." >
             <Button.Background>
@@ -83,6 +79,8 @@
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,312,367,0">
             <TextBox x:Name="tb_anilhamae" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent"/>
         </Border>
+        <RadioButton x:Name="macho" Content="M" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="401,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"    ToolTip="Macho" Height="25" Width="22"/>
+        <RadioButton x:Name="femea" Content="F" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="438,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"   ToolTip="Femea" Height="25" Width="22"/>
 
     </Grid>
 </Page>

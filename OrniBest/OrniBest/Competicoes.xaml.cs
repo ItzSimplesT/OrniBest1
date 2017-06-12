@@ -26,6 +26,19 @@ namespace OrniBest
             
         }
 
-       
+        private void btt_adicionarExposicao_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btt_editarExposicao_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btt_deleteExposicao_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

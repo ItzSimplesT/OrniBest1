@@ -4,7 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SQLite;
-
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace OrniBest
 {
@@ -74,7 +82,7 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             string sql_add = "INSERT INTO Passaro(n_anilha,n_anilhamae,n_anilhapai,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES (" + utilP.nanilha + "," + utilP.nanilhamae + "," + utilP.nanilhapai + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_especie + " ) ";
+                    "VALUES (" + utilP.nanilha + "," + utilP.nanilhamae + "," + utilP.nanilhapai + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_gaiola + " ) ";
             //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
            newCommand.ExecuteNonQuery();
@@ -87,17 +95,19 @@ namespace OrniBest
             idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
             reader.Dispose();
             myConn.Close();
+            MessageBox.Show("Adiocionado com sucesso!");
             return idUltimoRegisto;
 
 
         }
-        public static int UptadePassaro(passaro2 utilP)
+        public static int UptadePassaro(passaro2 utilP, long n_anilha)
         {
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "INSERT INTO Passaro(n_anilha,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES (" + utilP.nanilha + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_especie + " ) ";
+            utilP.id_utilizador = 1;
+            string sql_add = "UPDATE `passaro` SET  `n_anilhamae` = " + utilP.nanilhamae + " ,`n_anilhapai` = " + utilP.nanilhapai + ",`genero` = '" + utilP.genero + "',`nome` = '" + utilP.nome + "',`foto`= '" + utilP.foto + "',`alimento`= '" + utilP.Alimento + "',`id_utilizador`= " + utilP.id_utilizador + ",`id_especie`=" + utilP.id_especie + ",`id_gaiola`=" + utilP.id_gaiola + " WHERE `n_anilha` = " + n_anilha;
+            
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
@@ -110,6 +120,7 @@ namespace OrniBest
             idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
             reader.Dispose();
             myConn.Close();
+            MessageBox.Show("Adicionado com sucesso!");
             return idUltimoRegisto;
 
 
@@ -119,8 +130,8 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             int anilhapagar = n_anilhadelete;
-            string sql_add = "DELETE FROM `passaro` WHERE n_anilha= " + anilhapagar; 
-          
+            string sql_add = "DELETE FROM `passaro` WHERE n_anilha= " + anilhapagar;
+            MessageBox.Show("Removido com sucesso!");
 
             SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
             newCommand.ExecuteNonQuery();
