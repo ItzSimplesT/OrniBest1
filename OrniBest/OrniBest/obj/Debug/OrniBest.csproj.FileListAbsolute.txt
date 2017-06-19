@@ -244,3 +244,7 @@ C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramewo
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Competicoes.g.cs
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Competicoes.baml
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarComp.g.cs
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarComp.g.cs
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarComp.baml
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarComp.baml

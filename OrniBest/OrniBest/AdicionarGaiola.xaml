@@ -50,7 +50,6 @@
                 <ImageBrush ImageSource="icon/Undo-64.png"/>
             </Button.Background>
         </Button>
-        <ListBox x:Name="lb_gaiola" HorizontalAlignment="Left" Height="408" Margin="619,63,0,0" VerticalAlignment="Top" Width="354" BorderBrush="Gray" BorderThickness="2"/>
 
     </Grid>
 </Page>
