@@ -53,11 +53,11 @@ namespace OrniBest
                 utilC.Clear();
                 while (reader.Read())
                 {
-
-                competicoes2 newExposicao = new competicoes2((long)reader["id_exposicao"],
+                
+                competicoes2 newExposicao = new competicoes2( (long)reader["id_exposicao"],
                                                                 (string)reader["nome"],
                                                                 (string)reader["data"],
-                                                                (string)reader["cidade"],
+                                                                (string)reader["localizacao"],
                                                                 (string)reader["morada"]);
 
                     utilC.Add(newExposicao);

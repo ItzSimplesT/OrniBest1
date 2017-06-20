@@ -36,7 +36,7 @@ namespace OrniBest
         private void btt_adicionargaiola_Click(object sender, RoutedEventArgs e)
         {
             Gaiola2 registo = new Gaiola2(System.Convert.ToInt32(tb_codgaiola.Text), System.Convert.ToInt32(tb_lotacao.Text), System.Convert.ToInt32(tb_comprimento.Text), System.Convert.ToInt32(tb_largura.Text), System.Convert.ToInt32(tb_altura.Text));
-            Gaiola2.AddRegistos(registo);
+            Gaiola2.AddRegistos(registo, System.Convert.ToInt32(tb_codgaiola.Text));
         }
     }
 }

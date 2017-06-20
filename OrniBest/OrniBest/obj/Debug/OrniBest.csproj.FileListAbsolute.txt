@@ -250,3 +250,5 @@ C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\AdicionarComp
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarComp.baml
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteComp.g.cs
 C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteComp.baml
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Ajuda.g.cs
+C:\Users\TiagoH\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Ajuda.baml
