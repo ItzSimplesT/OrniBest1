@@ -64,12 +64,12 @@ namespace OrniBest
             myConn.Close();
             return utilG;
         }
-        public static int AddRegistos(Gaiola2 utilG)
+        public static int AddRegistos(Gaiola2 utilG, int codgaiola)
         {
 
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
-            string sql_add = "UPDATE `gaiola` SET `lotacao`= " + utilG.lotacao + " ,`comprimento`=" + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + "WHERE cod_gaiola = " + utilG.codgaiola;
+            string sql_add = "UPDATE `gaiola` SET `lotacao`= " + utilG.lotacao + " ,`comprimento`=" + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + "WHERE cod_gaiola = " + codgaiola;
            
  
             //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";

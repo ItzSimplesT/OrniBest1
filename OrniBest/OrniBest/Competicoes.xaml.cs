@@ -28,17 +28,20 @@ namespace OrniBest
 
         private void btt_adicionarExposicao_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("AdicionarComp.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void btt_editarExposicao_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("EditarComp.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void btt_deleteExposicao_Click(object sender, RoutedEventArgs e)
         {
-
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("DeleteComp.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

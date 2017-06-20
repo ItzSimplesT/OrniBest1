@@ -47,7 +47,7 @@ namespace OrniBest
             {
                 SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
                 myConn.Open();
-                string sql_select = "SELECT * FROM Exposicao";
+                string sql_select = "SELECT * FROM Exposicoes";
                 SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
                 SQLiteDataReader reader = myCommand.ExecuteReader();
                 utilC.Clear();
@@ -71,14 +71,14 @@ namespace OrniBest
 
                 SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
                 myConn.Open();
-                string sql_add = "INSERT INTO `Exposicao`(`id_exposicao`, `nome`, `data`, `localicao`, `morada`)" + "VALUES (" + utilC.id_exposicao + ",'" + utilC.nome + "','" + utilC.data + "','" + utilC.cidade + "','" + utilC.morada + "' ) ";
+                string sql_add = "INSERT INTO `Exposicoes`(`id_exposicao`, `nome`, `data`, `localicao`, `morada`)" + "VALUES (" + utilC.id_exposicao + ",'" + utilC.nome + "','" + utilC.data + "','" + utilC.cidade + "','" + utilC.morada + "' ) ";
 
 
                 //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
                 SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
                 newCommand.ExecuteNonQuery();
 
-                string sql_id = "SELECT MAX(id_exposicao) as idAtual FROM Exposicao ";
+                string sql_id = "SELECT MAX(id_exposicao) as idAtual FROM Exposicoes ";
                 SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
                 SQLiteDataReader reader = idCommando.ExecuteReader();
                 int idUltimoRegisto = 0;

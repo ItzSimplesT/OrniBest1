@@ -84,10 +84,16 @@
     <Compile Include="AdicionarGaiola.xaml.cs">
       <DependentUpon>AdicionarGaiola.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Ajuda.xaml.cs">
+      <DependentUpon>Ajuda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Clube2.cs" />
     <Compile Include="competicoes2.cs" />
     <Compile Include="Competicoes.xaml.cs">
       <DependentUpon>Competicoes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteComp.xaml.cs">
+      <DependentUpon>DeleteComp.xaml</DependentUpon>
     </Compile>
     <Compile Include="DeleteGaiola.xaml.cs">
       <DependentUpon>DeleteGaiola.xaml</DependentUpon>
@@ -131,7 +137,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Ajuda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Competicoes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DeleteComp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

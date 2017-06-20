@@ -50,7 +50,7 @@ namespace OrniBest
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
             int codgaiola = Convert.ToInt32(tb_codgaiola.Text);
-            passaro2.DeletePassaro(codgaiola);
+            Gaiola2.DeleteGaiola(codgaiola);
             lb_gaiola.Items.Clear();
             List<Gaiola2> utilG = new List<Gaiola2>();
             utilG = Gaiola2.lerRegistos();
