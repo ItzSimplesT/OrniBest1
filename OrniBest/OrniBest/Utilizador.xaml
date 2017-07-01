@@ -29,7 +29,7 @@
                 <Label x:Name="lb_clube" Content="Clube" HorizontalAlignment="Left"  VerticalAlignment="Top" Height="37" Width="256" FontSize="25" Margin="-1,12,0,-1" FontFamily="Arial" Foreground="#FF9E9D9D" />
             </Border>
             <Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="296" Margin="722,50,0,0" VerticalAlignment="Top" Width="276">
-                <ComboBox x:Name="comboBox" Margin="9,55,9,213" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Height="26" Width="256" BorderBrush="#FFC5C2C2"/>
+                <ComboBox x:Name="cb_clube" Margin="9,55,9,213" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" Height="26" Width="256" BorderBrush="#FFC5C2C2"/>
             </Border>
 
            <!-- <Button x:Name="bt_sugerir" Content="Sugerir Clube" HorizontalAlignment="Left" Margin="871,292,0,0" VerticalAlignment="Top" Width="112" Height="35" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial"/>-->

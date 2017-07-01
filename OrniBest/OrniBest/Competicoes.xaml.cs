@@ -16,31 +16,32 @@ using System.Windows.Shapes;
 namespace OrniBest
 {
     /// <summary>
-    /// Interaction logic for MenuGaiola.xaml
+    /// Interação lógica para Competicoes.xam
     /// </summary>
-    public partial class MenuGaiola : Page
+    public partial class Competicoes : Page
     {
-        public MenuGaiola()
+        public Competicoes()
         {
             InitializeComponent();
+            
         }
 
-        private void btt_AdicionarGaiola_Click(object sender, RoutedEventArgs e)
+        private void btt_adicionarExposicao_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Uri("AdicionarGaiola.xaml", UriKind.RelativeOrAbsolute));
+            nav.Navigate(new Uri("AdicionarComp.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btt_EditarGaiola_Click(object sender, RoutedEventArgs e)
+        private void btt_editarExposicao_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Uri("EditarGaiola.xaml", UriKind.RelativeOrAbsolute));
+            nav.Navigate(new Uri("EditarComp.xaml", UriKind.RelativeOrAbsolute));
         }
 
-        private void btt_RemoverGaiola_Click(object sender, RoutedEventArgs e)
+        private void btt_deleteExposicao_Click(object sender, RoutedEventArgs e)
         {
             NavigationService nav = NavigationService.GetNavigationService(this);
-            nav.Navigate(new Uri("DeleteGaiola.xaml", UriKind.RelativeOrAbsolute));
+            nav.Navigate(new Uri("DeleteComp.xaml", UriKind.RelativeOrAbsolute));
         }
     }
 }

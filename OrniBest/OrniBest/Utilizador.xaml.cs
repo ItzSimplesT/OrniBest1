@@ -26,12 +26,48 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
+            List<Clube2> utilP = new List<Clube2>();
+            utilP = Clube2.lerRegistos();
+            if (utilP.Count != 0)
+            {
+                foreach (var x in utilP)
+                {
+                    string mostrar = x.id_clube + "-" + x.nome;
 
-            //Dictionary<int, utilizador2> u = utilizador2.lerRegistos();
-            //u.
-            
+                    cb_clube.Items.Add(mostrar);
+                    
 
-            
+
+
+
+                }
+            }
+
+            List<utilizador2> utilU = new List<utilizador2>();
+            utilU = utilizador2.lerRegistos();
+            if (utilU.Count != 0)
+            {
+                foreach (var x in utilU)
+                {
+                    tb_nome.Text = x.nome;
+                    tb_morada.Text = x.morada;
+                    tb_STAM.Text = x.stam.ToString();
+                    tb_telemovel.Text = x.telemovel.ToString();
+                    tb_codigopostal.Text = x.codigo_postal.ToString();
+                    data_nascimento.Text = x.data_nascimento.ToString();
+                    
+
+
+
+                    
+
+
+
+
+
+                }
+            }
+
         }
 
         private void btt_selecionarimagem_Click(object sender, RoutedEventArgs e)
@@ -76,8 +112,8 @@ namespace OrniBest
 
         private void bt_salvar_Click(object sender, RoutedEventArgs e)
         {
-            int clube = 0;
-            utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),System.Convert.ToInt32(tb_STAM.Text),data_nascimento.Text,tb_morada.Text, tb_codigopostal.Text, clube);
+            int clube = cb_clube.SelectedIndex;
+            utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),tb_STAM.Text,data_nascimento.Text,tb_morada.Text, tb_codigopostal.Text, clube);
             utilizador2.AddRegistos(registo);
         }
     }

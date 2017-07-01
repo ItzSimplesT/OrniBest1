@@ -10,8 +10,8 @@
 
     <Grid>
         <Button x:Name="btt_AdicionarGaiola" Content="Adicionar Gaiola" HorizontalAlignment="Left" Margin="364,86,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" Grid.Column="1" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20" Click="btt_AdicionarGaiola_Click"/>
-        <Button x:Name="btt_EditarGaiola" Content="Editar Gaiola" HorizontalAlignment="Left" Margin="364,253,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20"/>
-        <Button x:Name="btt_RemoverGaiola" Content="Remover Gaiola" HorizontalAlignment="Left" Margin="364,416,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" Grid.Column="1" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20"/>
+        <Button x:Name="btt_EditarGaiola" Content="Editar Gaiola" HorizontalAlignment="Left" Margin="364,253,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20" Click="btt_EditarGaiola_Click"/>
+        <Button x:Name="btt_RemoverGaiola" Content="Remover Gaiola" HorizontalAlignment="Left" Margin="364,416,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" Grid.Column="1" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20" Click="btt_RemoverGaiola_Click"/>
 
     </Grid>
 </Page>
