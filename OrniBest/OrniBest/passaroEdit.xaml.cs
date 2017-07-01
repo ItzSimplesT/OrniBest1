@@ -25,21 +25,21 @@ namespace OrniBest
         public passaroEdit()
         {
             InitializeComponent();
-            List<passaro2> utilP = new List<passaro2>();
-            utilP = passaro2.lerRegistos();
-            if (utilP.Count != 0)
-            {
-                foreach (var x in utilP)
-                {
-                    string mostrar = x.nanilha + "-" + x.nome;
+            //List<passaro2> utilP = new List<passaro2>();
+            //utilP = passaro2.lerRegistos();
+            //if (utilP.Count != 0)
+            //{
+            //    foreach (var x in utilP)
+            //    {
+            //        string mostrar = x.nanilha + "-" + x.nome;
 
-                    lb_pass.Items.Add(mostrar);
-
-
+            //        lb_pass.Items.Add(mostrar);
 
 
-                }
-            }
+
+
+            //    }
+            //}
 
             
             
