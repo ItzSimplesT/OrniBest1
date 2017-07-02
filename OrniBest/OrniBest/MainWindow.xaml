@@ -56,7 +56,7 @@
             <Button x:Name="btt_competicoes" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,177,0,0" Background="#A0DAE4" Click="btt_competicoes_Click">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="bird1" Height="49" Source="icon/Trophy-48.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left" Opacity="40"/>
-                    <Label Padding="0" Content="Competições" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
+                    <Label Padding="0" Content="Exposições" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
             </Button>
             <Button x:Name="btt_gaiola" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,236,0,0" Background="#A0DAE4" Click="btt_gaiola_Click">
@@ -71,11 +71,14 @@
                     <Label Padding="0" Content="Família" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
             </Button>
-            <Button x:Name="btt_Familia_Copy" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,354,0,0" Background="#A0DAE4" Click="btt_Familia_Click">
+            <Button x:Name="btt_ajuda" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="59" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,354,0,0" Background="#A0DAE4" Click="btt_ajuda_Click">
                 <DockPanel HorizontalAlignment="Stretch">
                     <Image x:Name="Ajuda" Height="49" Source="icon/Help-64.png" Stretch="Fill" Width="53"  DockPanel.Dock="Left" Opacity="40"/>
                     <Label Padding="0" Content="Ajuda" Height="25" Width="81" DockPanel.Dock="Right" VerticalAlignment="Center" FontSize="14" FontFamily="Segoe UI Light"/>
                 </DockPanel>
+            </Button>
+            <Button x:Name="btt_nada" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Top" Width="250" Height="275" BorderBrush="Transparent" BorderThickness="0"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Margin="0,413,0,0" Background="#A0DAE4" Click="btt_nada_Click">
+                <DockPanel HorizontalAlignment="Stretch"/>
             </Button>
         </Grid>
     </Border>

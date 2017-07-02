@@ -81,5 +81,15 @@ namespace OrniBest
         {
             frame.Content = new MenuGaiola();
         }
+
+        private void btt_nada_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btt_ajuda_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

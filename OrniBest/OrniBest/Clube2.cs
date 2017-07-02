@@ -36,16 +36,7 @@ namespace OrniBest
             utilC.Clear();
             while (reader.Read())
             {
-                //long n_anilha = (long)reader["n_anilha"];
-                //string genero = (string)reader["genero"];
-                //string nome = (string)reader["nome"];
-
-                ////string foto = (string)reader["foto"];
-
-                ////string alimento = (string)reader["alimento"];
-                ////long id_utilizador = (long)reader["id_utilizador"];
-                ////long id_especie = (long)reader["id_especie"];
-                ////long id_gaiola = (long)reader["id_gaiola"];
+               
 
 
                 Clube2 newclube = new Clube2((long)reader["id_clube"],                                                  

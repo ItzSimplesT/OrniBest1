@@ -40,6 +40,21 @@ namespace OrniBest
 
                 }
             }
+            List<Gaiola2> utilG = new List<Gaiola2>();
+            utilG = Gaiola2.lerRegistos();
+            if (utilE.Count != 0)
+            {
+                foreach (var x in utilG)
+                {
+                    string mostrar = x.codgaiola.ToString();
+
+                    cb_gaiola.Items.Add(mostrar);
+
+
+
+
+                }
+            }
         }
 
        
