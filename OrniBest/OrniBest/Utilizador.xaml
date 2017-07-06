@@ -37,7 +37,11 @@
 
 
 
-            <DatePicker Name="data_nascimento" HorizontalAlignment="Left" Margin="418,396,0,0" VerticalAlignment="Top" Height="32" Width="132"  />
+            <DatePicker Name="data_nascimento" HorizontalAlignment="Left" Margin="418,396,0,0" VerticalAlignment="Top" Height="32" Width="132" FirstDayOfWeek="Monday"  >
+                <DatePicker.BlackoutDates>
+                    <CalendarDateRange End="07/11/2017 23:59:00"/>
+                </DatePicker.BlackoutDates>
+            </DatePicker>
             <Ellipse Margin="64,50,840,506" Stroke="#FF302A2A"  >
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="imagens/transferir.jpg"/>

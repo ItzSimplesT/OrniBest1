@@ -112,9 +112,7 @@ namespace OrniBest
 
         private void bt_salvar_Click(object sender, RoutedEventArgs e)
         {
-            int clube = cb_clube.SelectedIndex;
-            DateTime now = DateTime.Now;
-            if(data_nascimento.Text >=  now)
+            int clube = cb_clube.SelectedIndex;           
             utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),tb_STAM.Text,data_nascimento.Text,tb_morada.Text, tb_codigopostal.Text, clube);
             utilizador2.AddRegistos(registo);
         }

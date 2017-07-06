@@ -107,9 +107,19 @@ namespace OrniBest
             {
                 try
                 {
+                    string nome = System.IO.Path.GetFileName(ofd1.FileName);
+                    string sp = ofd1.FileName;
+                    string tp = @"passaro";
+                    string newPathFile = System.IO.Path.Combine(tp, sp);
+
+                    System.IO.File.Copy(nome, newPathFile);
+                    string curdir = System.IO.Path.GetDirectoryName(ofd1.FileName);
+                    string novonome = tb_anilha.Text + ".jpg";
+                    System.IO.File.Move(ofd1.FileName, System.IO.Path.Combine(curdir, novonome));
 
                     image.Source = new BitmapImage(new Uri(ofd1.FileName));
                     image.Stretch = Stretch.Fill;
+
 
 
 
