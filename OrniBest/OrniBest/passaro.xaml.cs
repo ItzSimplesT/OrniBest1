@@ -68,9 +68,9 @@ namespace OrniBest
         private void btt_adicionar_Click(object sender, RoutedEventArgs e)
         {
 
-            int especie = cb_especie.SelectedIndex;            
+            int especie = cb_especie.SelectedIndex +1 ;            
             int id_utilizador = 1;
-            int gaiola = cb_gaiola.SelectedIndex;
+            int gaiola = cb_gaiola.SelectedIndex +1;
             string sexo;
             string foto = "aindan";
             if (macho.IsChecked == true)

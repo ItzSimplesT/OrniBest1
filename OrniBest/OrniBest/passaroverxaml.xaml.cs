@@ -87,8 +87,8 @@ namespace OrniBest
                     tb_alimento.Text = x.Alimento.ToString();
                     tb_anilhamae.Text = x.nanilhamae.ToString();
                     tb_anilhapai.Text = x.nanilhapai.ToString();
-                    cb_especie.SelectedIndex = System.Convert.ToInt32(x.id_especie);
-                    cb_gaiola.SelectedIndex = System.Convert.ToInt32(x.id_gaiola);
+                    cb_especie.SelectedIndex = System.Convert.ToInt32(x.id_especie) -1;
+                    cb_gaiola.SelectedIndex = System.Convert.ToInt32(x.id_gaiola) -1;
                     if(x.genero == "macho")
                     {
                         macho.IsChecked = true;

@@ -14,7 +14,7 @@
         <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="313,70,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
         HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,70,420,0">
-            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            <TextBox x:Name="tb_nome" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" IsEnabled="False"/>
         </Border>
         <!-- Genero -->
         <Label x:Name="lb_genero" Content="Genero :" HorizontalAlignment="Left" Margin="304,141,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
@@ -22,7 +22,7 @@
         <Label x:Name="lb_anilha" Content="Nº Anilha:" HorizontalAlignment="Left" Margin="302,203,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,201,410,0">
-            <TextBox x:Name="tb_anilha" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            <TextBox x:Name="tb_anilha" Text=" " HorizontalAlignment="Left" Height="23" Margin="6,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" IsEnabled="False"/>
         </Border>
         <!--Especie-->
         <!--  Especie  -->
@@ -57,24 +57,24 @@
         <Label x:Name="lb_especie_Copy" Content="Especie :" HorizontalAlignment="Left" Margin="305,355,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,411,368,0">
-            <TextBox x:Name="tb_alimento" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
+            <TextBox x:Name="tb_alimento" Text=" " HorizontalAlignment="Left" Height="23" Margin="8,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="204" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" IsEnabled="False"/>
         </Border>
         <Label x:Name="lb_alimento" Content="Alimento :" HorizontalAlignment="Left" Margin="305,412,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" />
-        <ComboBox x:Name="cb_especie" HorizontalAlignment="Left" Margin="445,361,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2" Height="20"/>
+        <ComboBox x:Name="cb_especie" HorizontalAlignment="Left" Margin="445,361,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2" Height="20" IsEnabled="False"/>
         <Label x:Name="lb_gaiola" Content="Gaiola :" HorizontalAlignment="Left" Margin="305,457,0,0" VerticalAlignment="Top" Height="32" Width="90" FontSize="15" FontFamily="MS Reference Sans Serif" />
-        <ComboBox x:Name="cb_gaiola" HorizontalAlignment="Left" Margin="445,457,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2" Height="20"/>
+        <ComboBox x:Name="cb_gaiola" HorizontalAlignment="Left" Margin="445,457,0,0" VerticalAlignment="Top" Width="220" Style="{StaticResource {x:Static ToolBar.ComboBoxStyleKey}}" BorderThickness="1" BorderBrush="#FFC5C2C2" Height="20" IsEnabled="False"/>
         <Label x:Name="lb_anilhapai" Content="Nº Anilha Pai:" HorizontalAlignment="Left" Margin="302,257,0,0" VerticalAlignment="Top" Height="32" Width="125" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,259,367,0">
-            <TextBox x:Name="tb_anilhapai" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent"/>
+            <TextBox x:Name="tb_anilhapai" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent" IsEnabled="False"/>
         </Border>
         <Label x:Name="lb_anilhamae" Content="Nº Anilha Mãe:" HorizontalAlignment="Left" Margin="302,310,0,0" VerticalAlignment="Top" Height="32" Width="125" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,312,367,0">
-            <TextBox x:Name="tb_anilhamae" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent"/>
+            <TextBox x:Name="tb_anilhamae" Text=" " HorizontalAlignment="Left" Height="23" Margin="9,1,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="203" BorderBrush="Transparent" BorderThickness="0" MaxLines="1" Background="Transparent" IsEnabled="False"/>
         </Border>
-        <RadioButton x:Name="macho" Content="M" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="401,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"    ToolTip="Macho" Height="25" Width="22"/>
-        <RadioButton x:Name="femea" Content="F" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="438,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"   ToolTip="Femea" Height="25" Width="22"/>
+        <RadioButton x:Name="macho" Content="M" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="401,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"    ToolTip="Macho" Height="25" Width="22" IsEnabled="False"/>
+        <RadioButton x:Name="femea" Content="F" BorderThickness="2" BorderBrush="#FFC5C2C2" HorizontalAlignment="Left" Margin="438,144,0,0" VerticalAlignment="Top" Style="{StaticResource {x:Static ToolBar.RadioButtonStyleKey}}"   ToolTip="Femea" Height="25" Width="22" IsEnabled="False"/>
 
     </Grid>
 </Page>
