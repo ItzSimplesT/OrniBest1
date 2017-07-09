@@ -125,6 +125,9 @@
     <Compile Include="passaroMenu.xaml.cs">
       <DependentUpon>passaroMenu.xaml</DependentUpon>
     </Compile>
+    <Compile Include="passaroverxaml.xaml.cs">
+      <DependentUpon>passaroverxaml.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Utilizador.xaml.cs">
       <DependentUpon>Utilizador.xaml</DependentUpon>
     </Compile>
@@ -198,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="passaroMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="passaroverxaml.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

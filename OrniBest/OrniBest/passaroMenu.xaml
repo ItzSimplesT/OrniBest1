@@ -15,13 +15,14 @@
         </Grid.ColumnDefinitions>
 
 
-        <Button x:Name="btt_editarPassaro" Content="Editar Pássaro" HorizontalAlignment="Left" Margin="32,295,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_editarPassaro_Click" FontSize="20" Grid.Column="1"/>
+        <Button x:Name="btt_editarPassaro" Content="Editar Pássaro" HorizontalAlignment="Left" Margin="32,360,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" Click="btt_editarPassaro_Click" FontSize="20" Grid.Column="1"/>
 
         <Button x:Name="btt_deletePassaro" Content="Apagar Pássaro" HorizontalAlignment="Left" Margin="32,481,0,0" VerticalAlignment="Top" Width="315" Height="81"  Grid.Column="1" Click="btt_deletePassaro_Click" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke"  FontSize="20"/>
 
 
         <Button x:Name="btt_adicionarPassaro" Content="Adicionar Pássaro" HorizontalAlignment="Left" Margin="32,125,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" Grid.Column="1" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20" Click="btt_adicionarPassaro_Click"/>
-         
+        <Button x:Name="btt_verpassaro" Content="Ver Pássaro" HorizontalAlignment="Left" Margin="32,239,0,0" VerticalAlignment="Top" Width="315" Height="85" BorderThickness="2" Grid.Column="1" BorderBrush="#5B5B5B"   Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontSize="20" Click="btt_verpassaro_Click"/>
+
 
         <!-- Nome -->
     </Grid>

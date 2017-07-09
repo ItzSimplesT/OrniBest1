@@ -242,3 +242,5 @@ C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Ajuda.baml
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\Competicoes.baml
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteComp.baml
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarComp.baml
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\passaroverxaml.g.cs
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\passaroverxaml.baml

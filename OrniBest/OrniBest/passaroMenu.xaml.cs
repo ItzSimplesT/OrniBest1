@@ -44,5 +44,11 @@ namespace OrniBest
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("passaro.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void btt_verpassaro_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("passaroverxaml.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }
