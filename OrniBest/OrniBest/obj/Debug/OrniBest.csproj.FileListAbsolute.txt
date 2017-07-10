@@ -244,3 +244,7 @@ C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\DeleteComp.bam
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\EditarComp.baml
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\passaroverxaml.g.cs
 C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\passaroverxaml.baml
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\exposicaover.g.cs
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\exposicaover.baml
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\gaiolaver.g.cs
+C:\Users\tiago\Source\Repos\OrniBest1\OrniBest\OrniBest\obj\Debug\gaiolaver.baml

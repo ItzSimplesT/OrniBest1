@@ -105,10 +105,16 @@
       <DependentUpon>EditarGaiola.xaml</DependentUpon>
     </Compile>
     <Compile Include="Especie.cs" />
+    <Compile Include="exposicaover.xaml.cs">
+      <DependentUpon>exposicaover.xaml</DependentUpon>
+    </Compile>
     <Compile Include="familia.xaml.cs">
       <DependentUpon>familia.xaml</DependentUpon>
     </Compile>
     <Compile Include="Gaiola2.cs" />
+    <Compile Include="gaiolaver.xaml.cs">
+      <DependentUpon>gaiolaver.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MenuGaiola.xaml.cs">
       <DependentUpon>MenuGaiola.xaml</DependentUpon>
     </Compile>
@@ -164,7 +170,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="exposicaover.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="familia.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="gaiolaver.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

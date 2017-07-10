@@ -42,5 +42,12 @@ namespace OrniBest
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("DeleteGaiola.xaml", UriKind.RelativeOrAbsolute));
         }
+        
+
+        private void btt_vergaiola_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("gaiolaver.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
 }

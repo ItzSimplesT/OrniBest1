@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:OrniBest"
       mc:Ignorable="d" 
         d:DesignHeight="688" d:DesignWidth="1032"
-      Title="Editar Pássaro" Background="White">
+      Title="Ver Pássaro" Background="White">
 
     <Grid>
         <ListBox Name="lb_pass" HorizontalAlignment="Left" Height="632" Margin="10,46,0,0" VerticalAlignment="Top" Width="267" SelectionChanged="ListBox_SelectionChanged"/>

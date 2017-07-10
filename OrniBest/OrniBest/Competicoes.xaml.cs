@@ -43,5 +43,12 @@ namespace OrniBest
             NavigationService nav = NavigationService.GetNavigationService(this);
             nav.Navigate(new Uri("DeleteComp.xaml", UriKind.RelativeOrAbsolute));
         }
+
+        private void btt_verexposicao_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService nav = NavigationService.GetNavigationService(this);
+            nav.Navigate(new Uri("exposicaover.xaml", UriKind.RelativeOrAbsolute));
+        }
     }
+    
 }
