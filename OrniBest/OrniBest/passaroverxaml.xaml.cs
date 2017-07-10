@@ -23,6 +23,7 @@ namespace OrniBest
         public passaroverxaml()
         {
             InitializeComponent();
+            try { 
             List<passaro2> utilP = new List<passaro2>();
             utilP = passaro2.lerRegistos();
             if (utilP.Count != 0)
@@ -37,7 +38,15 @@ namespace OrniBest
 
 
                 }
+
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler os pássaros." + " " + ex.Message);
+
+            }
+            try { 
             List<Especie> utilE = new List<Especie>();
             utilE = Especie.lerRegistos();
             if (utilE.Count != 0)
@@ -53,6 +62,13 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as especies." + " " + ex.Message);
+
+            }
+            try { 
             List<Gaiola2> UtilG = new List<Gaiola2>();
             UtilG = Gaiola2.lerRegistos();
             if (UtilG.Count != 0)
@@ -68,47 +84,61 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
+
+            }
         }
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
-            string nanilha = tb_nanilha2.Text;
-            long nanilhaLong = Convert.ToInt64(nanilha);
-            List<passaro2> utilP = new List<passaro2>();
-            utilP = passaro2.lerRegistos();
-
-            foreach (var x in utilP)
+            try
             {
+                string nanilha = tb_nanilha2.Text;
+                long nanilhaLong = Convert.ToInt64(nanilha);
+                List<passaro2> utilP = new List<passaro2>();
+                utilP = passaro2.lerRegistos();
 
-                if (x.nanilha == nanilhaLong)
+                foreach (var x in utilP)
                 {
-                    tb_anilha.Text = x.nanilha.ToString();
-                    tb_nome.Text = x.nome.ToString();
-                    tb_alimento.Text = x.Alimento.ToString();
-                    tb_anilhamae.Text = x.nanilhamae.ToString();
-                    tb_anilhapai.Text = x.nanilhapai.ToString();
-                    cb_especie.SelectedIndex = System.Convert.ToInt32(x.id_especie) -1;
-                    cb_gaiola.SelectedIndex = System.Convert.ToInt32(x.id_gaiola) -1;
-                    if(x.genero == "macho")
+
+                    if (x.nanilha == nanilhaLong)
                     {
-                        macho.IsChecked = true;
+                        tb_anilha.Text = x.nanilha.ToString();
+                        tb_nome.Text = x.nome.ToString();
+                        tb_alimento.Text = x.Alimento.ToString();
+                        tb_anilhamae.Text = x.nanilhamae.ToString();
+                        tb_anilhapai.Text = x.nanilhapai.ToString();
+                        cb_especie.SelectedIndex = System.Convert.ToInt32(x.id_especie) - 1;
+                        cb_gaiola.SelectedIndex = System.Convert.ToInt32(x.id_gaiola) - 1;
+                        if (x.genero == "macho")
+                        {
+                            macho.IsChecked = true;
+
+
+                        }
+                        if (x.genero == "femea")
+                        {
+                            femea.IsChecked = true;
+
+
+                        }
+
+
 
 
                     }
-                    if (x.genero == "femea")
-                    {
-                        femea.IsChecked = true;
-
-
-                    }
-
 
 
 
                 }
-
-
-
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui encontrar esse pássaro." + " " + ex.Message);
+                
             }
         }
 

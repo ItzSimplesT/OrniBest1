@@ -26,24 +26,33 @@ namespace OrniBest
         public Utilizador()
         {
             InitializeComponent();
-            List<Clube2> utilP = new List<Clube2>();
-            utilP = Clube2.lerRegistos();
-            if (utilP.Count != 0)
+            try
             {
-                foreach (var x in utilP)
+                List<Clube2> utilP = new List<Clube2>();
+                utilP = Clube2.lerRegistos();
+                if (utilP.Count != 0)
                 {
-                    string mostrar = x.id_clube + "-" + x.nome;
+                    foreach (var x in utilP)
+                    {
+                        string mostrar = x.id_clube + "-" + x.nome;
 
-                    cb_clube.Items.Add(mostrar);
-                    
+                        cb_clube.Items.Add(mostrar);
 
 
 
 
+
+                    }
                 }
+            
             }
-
-            List<utilizador2> utilU = new List<utilizador2>();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler os clubes." + " " + ex.Message);
+                
+            }
+            try { 
+    List<utilizador2> utilU = new List<utilizador2>();
             utilU = utilizador2.lerRegistos();
             if (utilU.Count != 0)
             {
@@ -66,6 +75,12 @@ namespace OrniBest
 
 
                 }
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler os dados do utilizador." + " " + ex.Message);
+
             }
 
         }
@@ -112,9 +127,17 @@ namespace OrniBest
 
         private void bt_salvar_Click(object sender, RoutedEventArgs e)
         {
-            int clube = cb_clube.SelectedIndex;           
-            utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text),tb_STAM.Text,data_nascimento.Text,tb_morada.Text, tb_codigopostal.Text, clube);
-            utilizador2.AddRegistos(registo);
+            try
+            {
+                int clube = cb_clube.SelectedIndex;
+                utilizador2 registo = new utilizador2(tb_nome.Text, System.Convert.ToInt32(tb_telemovel.Text), tb_STAM.Text, data_nascimento.Text, tb_morada.Text, tb_codigopostal.Text, clube);
+                utilizador2.AddRegistos(registo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nao consegui adicionar o ultilizador. " + " " + ex.Message);
+                
+            }
         }
     }
 }

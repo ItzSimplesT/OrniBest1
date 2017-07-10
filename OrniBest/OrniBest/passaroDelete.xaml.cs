@@ -23,28 +23,7 @@ namespace OrniBest
         public passaroDelete()
         {
             InitializeComponent();
-            //List<passaro2> utilP = new List<passaro2>();
-            //utilP = passaro2.lerRegistos();
-            //if (utilP.Count != 0)
-            //{
-            //    foreach (var x in utilP)
-            //    {
-            //        string mostrar = x.nanilha + "-" + x.nome;
-
-            //        lb_pass.Items.Add(mostrar);
-
-
-
-
-            //    }
-            //}
-        }
-
-        private void btt_deletef_Click(object sender, RoutedEventArgs e)
-        {
-            int n_anilhapagar = Convert.ToInt32(tb_n_anilha.Text);
-            passaro2.DeletePassaro(n_anilhapagar);
-            lb_pass.Items.Clear();
+            try { 
             List<passaro2> utilP = new List<passaro2>();
             utilP = passaro2.lerRegistos();
             if (utilP.Count != 0)
@@ -59,6 +38,50 @@ namespace OrniBest
 
 
                 }
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler os pássaros." + " " + ex.Message);
+
+            }
+        }
+
+        private void btt_deletef_Click(object sender, RoutedEventArgs e)
+        {
+            try { 
+            if(tb_n_anilha.Text != null)
+            {
+                int n_anilhapagar = Convert.ToInt32(tb_n_anilha.Text);
+                passaro2.DeletePassaro(n_anilhapagar);
+                lb_pass.Items.Clear();
+                List<passaro2> utilP = new List<passaro2>();
+                utilP = passaro2.lerRegistos();
+                if (utilP.Count != 0)
+                {
+                    foreach (var x in utilP)
+                    {
+                        string mostrar = x.nanilha + "-" + x.nome;
+
+                        lb_pass.Items.Add(mostrar);
+
+
+
+
+                    }
+                }
+
+
+            }
+            else { 
+           
+                MessageBox.Show("Tens que inserir o numero de anilha que queres apagar.");
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui apagar os dados." + " " + ex.Message);
+
             }
 
         }

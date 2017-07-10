@@ -89,7 +89,7 @@ namespace OrniBest
 
         private void btt_ajuda_Click(object sender, RoutedEventArgs e)
         {
-
+            frame.Content = new Ajuda();
         }
     }
 }

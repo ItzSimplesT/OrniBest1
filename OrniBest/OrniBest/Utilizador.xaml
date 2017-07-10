@@ -51,12 +51,12 @@
             <Button x:Name="bt_salvar" Content="Salvar Dados" HorizontalAlignment="Left" Margin="871,590,0,0" VerticalAlignment="Top" Width="112" Height="36" BorderBrush="#5B5B5B" BorderThickness="2"  Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}" Foreground="Black" Background="WhiteSmoke" FontFamily="Arial" Click="bt_salvar_Click"/>
                     
                <Label Content="Enviar um Email" Margin="871,304,43,358" Background="#FFFBFBFB" BorderBrush="#FF2B2B2B">
-               <!--  <i:Interaction.Triggers>
+                 <!--<i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseLeftButtonUp">
                         <ei:LaunchUriOrFileAction Path="mailto:tiagoaah86@gmail.com" /> 
                     </i:EventTrigger>
-                  </i:Interaction.Triggers>
-                   -->
+                  </i:Interaction.Triggers>-->
+                   
             </Label>
 
             <!--<Border BorderBrush="#FFCBC6C6" BorderThickness="1" HorizontalAlignment="Left" Height="657" Margin="242,0,0,0" VerticalAlignment="Top" Width="756"/>

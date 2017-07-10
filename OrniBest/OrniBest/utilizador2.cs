@@ -85,10 +85,10 @@ namespace OrniBest
                 MessageBox.Show("Foi Registado com sucesso");
                 return idUltimoRegisto;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Nao consegui adicionar com sucesso");
-                throw;
+                MessageBox.Show("Nao consegui adicionar com sucesso" + " " + ex.Message);
+                return 0;
             }
             
             

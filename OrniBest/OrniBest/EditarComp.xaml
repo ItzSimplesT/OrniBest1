@@ -57,7 +57,7 @@
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,10,467,0">
             <TextBox x:Name="tb_idcomp" Text=" " HorizontalAlignment="Left" Height="23" Margin="4,0,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="206" BorderBrush="Transparent" BorderThickness="0" MaxLines="1"/>
         </Border>
-        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="546,10,0,0" VerticalAlignment="Top" Width="31" Height="32" BorderThickness="4" Click="btt_pesquisar_Click" ToolTip="Ao introduzir o numero da anilha só ira aparecer esse passáro." >
+        <Button x:Name="btt_pesquisar" Content="" HorizontalAlignment="Left" Margin="570,10,0,0" VerticalAlignment="Top" Width="31" Height="32" BorderThickness="4" Click="btt_pesquisar_Click" ToolTip="Ao introduzir o numero da anilha só ira aparecer esse passáro." >
             <Button.Background>
                 <ImageBrush ImageSource="icon/Pesquisar-26.png"/>
             </Button.Background>

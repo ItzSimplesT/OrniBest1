@@ -22,6 +22,7 @@ namespace OrniBest
     {
         public gaiolaver()
         {
+            try { 
             InitializeComponent();
             List<Gaiola2> utilG = new List<Gaiola2>();
             utilG = Gaiola2.lerRegistos();
@@ -38,6 +39,12 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
+
+            }
         }
 
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)
@@ -48,29 +55,38 @@ namespace OrniBest
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
-            string cod_gaiola = tb_codgaiola.Text;
-            long codgaiolalong = Convert.ToInt64(cod_gaiola);
-            List<Gaiola2> utilG = new List<Gaiola2>();
-            utilG = Gaiola2.lerRegistos();
-
-            foreach (var x in utilG)
+            try
             {
+                string cod_gaiola = tb_codgaiola.Text;
+                long codgaiolalong = Convert.ToInt64(cod_gaiola);
+                List<Gaiola2> utilG = new List<Gaiola2>();
+                utilG = Gaiola2.lerRegistos();
 
-                if (x.codgaiola == codgaiolalong)
+                foreach (var x in utilG)
                 {
-                    tb_id.Text = x.codgaiola.ToString();
-                    tb_comp.Text = x.comprimento.ToString();
-                    tb_larg.Text = x.largura.ToString();
-                    tb_altura.Text = x.altura.ToString();
-                    tb_lotacao.Text = x.lotacao.ToString();
+
+                    if (x.codgaiola == codgaiolalong)
+                    {
+                        tb_id.Text = x.codgaiola.ToString();
+                        tb_comp.Text = x.comprimento.ToString();
+                        tb_larg.Text = x.largura.ToString();
+                        tb_altura.Text = x.altura.ToString();
+                        tb_lotacao.Text = x.lotacao.ToString();
+
+
+
+                    }
 
 
 
                 }
+            }
 
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui encontrar essa gaiola." + " " + ex.Message);
 
             }
         }
-    }
+}
 }

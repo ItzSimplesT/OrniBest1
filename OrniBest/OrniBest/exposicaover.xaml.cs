@@ -23,6 +23,8 @@ namespace OrniBest
         public exposicaover()
         {
             InitializeComponent();
+            try
+            {
             List<competicoes2> utilG = new List<competicoes2>();
             utilG = competicoes2.lerRegistos();
             if (utilG.Count != 0)
@@ -38,10 +40,17 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as exposições." + " " + ex.Message);
+
+            }
         }
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             string id_comp = tb_idcomp.Text;
             long codgaiolalong = Convert.ToInt64(id_comp);
             List<competicoes2> utilG = new List<competicoes2>();
@@ -62,7 +71,13 @@ namespace OrniBest
 
                 }
             }
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui encontrar essa exposição." + " " + ex.Message);
+
+            }
+
         }
 
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)

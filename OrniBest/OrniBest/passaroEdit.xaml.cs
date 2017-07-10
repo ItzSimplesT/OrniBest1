@@ -25,22 +25,31 @@ namespace OrniBest
         public passaroEdit()
         {
             InitializeComponent();
-            List<passaro2> utilP = new List<passaro2>();
-            utilP = passaro2.lerRegistos();
-            if (utilP.Count != 0)
+            try
             {
-                foreach (var x in utilP)
+                List<passaro2> utilP = new List<passaro2>();
+                utilP = passaro2.lerRegistos();
+                if (utilP.Count != 0)
                 {
-                    string mostrar = x.nanilha + "-" + x.nome;
+                    foreach (var x in utilP)
+                    {
+                        string mostrar = x.nanilha + "-" + x.nome;
 
-                    lb_pass.Items.Add(mostrar);
+                        lb_pass.Items.Add(mostrar);
 
 
 
 
+                    }
                 }
             }
-            List<Especie> utilE = new List<Especie>();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler os pássaros." + " " + ex.Message);
+                
+            }
+            try { 
+    List<Especie> utilE = new List<Especie>();
             utilE = Especie.lerRegistos();
             if (utilE.Count != 0)
             {
@@ -55,6 +64,13 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as especies." + " " + ex.Message);
+
+            }
+            try { 
             List<Gaiola2> UtilG = new List<Gaiola2>();
             UtilG = Gaiola2.lerRegistos();
             if (UtilG.Count != 0)
@@ -70,7 +86,12 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
 
+            }
 
 
 
@@ -113,6 +134,7 @@ namespace OrniBest
         
         private void btt_save_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             int especie = cb_especie.SelectedIndex;
             int id_gaiola = cb_gaiola.SelectedIndex;
             int id_utilizador = 1;
@@ -132,6 +154,12 @@ namespace OrniBest
                 passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, id_gaiola);
                 passaro2.UptadePassaro(registo, System.Convert.ToInt64(tb_anilha.Text));
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui editar os dados." + " " + ex.Message);
+
+            }
         }
 
         private void btt_Voltar1_Click(object sender, RoutedEventArgs e)
@@ -150,6 +178,7 @@ namespace OrniBest
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             string nanilha = tb_nanilha2.Text;
             long nanilhaLong = Convert.ToInt64(nanilha);
             List<passaro2> utilP = new List<passaro2>();
@@ -185,6 +214,12 @@ namespace OrniBest
                 }
 
 
+
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui pesquisar esse pássaro." + " " + ex.Message);
 
             }
 

@@ -66,65 +66,108 @@ namespace OrniBest
         }
         public static int AddRegistos(Gaiola2 utilG, int codgaiola)
         {
+            try
+            {
+                SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+                myConn.Open();
 
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
-            myConn.Open();
-            string sql_add = "UPDATE `gaiola` SET `lotacao`= " + utilG.lotacao + " ,`comprimento`=" + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + "WHERE cod_gaiola = " + codgaiola;
-           
- 
-            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            newCommand.ExecuteNonQuery();
 
-            string sql_id = "SELECT MAX(cod_gaiola) as idAtual FROM Gaiola ";
-            SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
-            SQLiteDataReader reader = idCommando.ExecuteReader();
-            int idUltimoRegisto = 0;
-            reader.Read(); // Ler na Base de Dados
-            idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
-            reader.Dispose();
-            myConn.Close();
-            MessageBox.Show("Adicionado com sucesso!");
-            return idUltimoRegisto;
+
+                string sql_add = "UPDATE `gaiola` SET `lotacao`= " + utilG.lotacao + " ,`comprimento`=" + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + "WHERE cod_gaiola = " + codgaiola;
+
+                try
+                {
+                    //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+                    SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                    newCommand.ExecuteNonQuery();
+
+                    string sql_id = "SELECT MAX(cod_gaiola) as idAtual FROM Gaiola ";
+                    SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
+                    SQLiteDataReader reader = idCommando.ExecuteReader();
+                    int idUltimoRegisto = 0;
+                    reader.Read(); // Ler na Base de Dados
+                    idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
+                    reader.Dispose();
+                    myConn.Close();
+                    MessageBox.Show("Adicionado com sucesso!");
+                    return idUltimoRegisto;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Nao consegui adicionar com sucesso" + " " + ex.Message);
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nao consegui conectar a base de dados" + " " + ex.Message);
+                return 0;
+            }
 
 
         }
         public static int UptadeGaiola(Gaiola2 utilG, int codgaiola)
         {
+            try {
+                SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+                myConn.Open();
+                string sql_add = "UPDATE `gaiola` SET `lotacao`=" + utilG.lotacao + ",`comprimento`= " + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + " WHERE `cod_gaiola`=" + codgaiola;
+                try { 
+                SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                newCommand.ExecuteNonQuery();
 
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
-            myConn.Open();
-            string sql_add = "UPDATE `gaiola` SET `lotacao`=" + utilG.lotacao + ",`comprimento`= " + utilG.comprimento + ",`largura`=" + utilG.largura + ",`altura`=" + utilG.altura + " WHERE `cod_gaiola`=" + codgaiola;
-           
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            newCommand.ExecuteNonQuery();
-
-            string sql_id = "SELECT MAX(cod_gaiola) as idAtual FROM Gaiola ";
-            SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
-            SQLiteDataReader reader = idCommando.ExecuteReader();
-            int idUltimoRegisto = 0;
-            reader.Read(); // Ler na Base de Dados
-            idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
-            reader.Dispose();
-            myConn.Close();
-            MessageBox.Show("Adicionado com sucesso!");
-            return idUltimoRegisto;
-
+                string sql_id = "SELECT MAX(cod_gaiola) as idAtual FROM Gaiola ";
+                SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
+                SQLiteDataReader reader = idCommando.ExecuteReader();
+                int idUltimoRegisto = 0;
+                reader.Read(); // Ler na Base de Dados
+                idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
+                reader.Dispose();
+                myConn.Close();
+                MessageBox.Show("Adicionado com sucesso!");
+                return idUltimoRegisto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui adicionar com sucesso" + " " + ex.Message);
+                return 0;
+            }
+        }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui conectar a base de dados" + " " + ex.Message);
+                return 0;
+            }
 
         }
         public static int DeleteGaiola(int cod_gaioladelete)
         {
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
-            myConn.Open();
-            int gaiolapagar = cod_gaioladelete;
-            string sql_add = "DELETE FROM `Gaiola` WHERE cod_gaiola= " + gaiolapagar;
+            try
+            {
+                SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+                myConn.Open();
+                int gaiolapagar = cod_gaioladelete;
+                string sql_add = "DELETE FROM `Gaiola` WHERE cod_gaiola= " + gaiolapagar;
 
-            
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            newCommand.ExecuteNonQuery();
-            MessageBox.Show("Removido com sucesso!");
+                try
+                {
+                    SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                    newCommand.ExecuteNonQuery();
+                    MessageBox.Show("Removido com sucesso!");
 
-            return 1;
+                    return 1;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Não consegui adicionar com sucesso" + " " + ex.Message);
+                    return 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui conectar a base de dados" + " " + ex.Message);
+                return 0;
+            }
         }
 
 

@@ -13,6 +13,32 @@
             <ColumnDefinition Width="73*"/>
             <ColumnDefinition Width="185*"/>
         </Grid.ColumnDefinitions>
+        <Label x:Name="lb_ajuda" Content="Tem que inserir os dados todos. No adicionar, Editar e Remover." HorizontalAlignment="Left" Margin="133,100,0,0" VerticalAlignment="Top" Height="32" Width="507" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_ajuda_Copy" Content="Não pode inserir uma anilha de um pássaro igual a outra de um outro pássaro." HorizontalAlignment="Left" Margin="133,137,0,0" VerticalAlignment="Top" Height="32" Width="617" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_ajuda_Copy1" Content="Para pesquisar no editar/ver tem que inserir o numero de anilha/id." HorizontalAlignment="Left" Margin="133,174,0,0" VerticalAlignment="Top" Height="32" Width="617" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_ajuda_Copy2" Content="No apagar tem que inserir o numero de anilha/id correcto." HorizontalAlignment="Left" Margin="133,211,0,0" VerticalAlignment="Top" Height="32" Width="617" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_ajuda_Copy3" Content="Atenção" HorizontalAlignment="Left" Margin="133,323,0,0" VerticalAlignment="Top" Height="49" Width="617" FontSize="20" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2" Background="White" Foreground="Red" />
+        <Label x:Name="lb_ajuda_Copy4" Content="Pedimos desculpa, mas neste momento não se encontra disponivel a função adicionar foto." HorizontalAlignment="Left" Margin="133,393,0,0" VerticalAlignment="Top" Height="32" Width="722" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.024"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lb_ajuda_Copy5" Content="Para qualquer problema não hesite em contactar :" HorizontalAlignment="Left" Margin="133,577,0,0" VerticalAlignment="Top" Height="32" Width="617" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label x:Name="lb_ajuda_Copy6" Content="Numero de telemovel : 919229540" HorizontalAlignment="Left" Margin="133,614,0,0" VerticalAlignment="Top" Height="32" Width="398" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.ColumnSpan="2"/>
+        <Label Content="Enviar um Email" Margin="244,614,378,48" Background="#FFFBFBFB" BorderBrush="#FF2B2B2B" Grid.Column="1">
+            <!--  <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseLeftButtonUp">
+                        <ei:LaunchUriOrFileAction Path="mailto:tiagoaah86@gmail.com" /> 
+                    </i:EventTrigger>
+                  </i:Interaction.Triggers>
+                   -->
+        </Label>
+        <Label x:Name="lb_ajuda_Copy7" Content="Ou" HorizontalAlignment="Left" Margin="161,612,0,0" VerticalAlignment="Top" Height="32" Width="148" FontSize="15" FontFamily="MS Reference Sans Serif" Grid.Column="1"/>
 
 
         <!-- Nome -->

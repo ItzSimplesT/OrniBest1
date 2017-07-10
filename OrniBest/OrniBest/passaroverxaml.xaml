@@ -9,7 +9,7 @@
       Title="Ver Pássaro" Background="White">
 
     <Grid>
-        <ListBox Name="lb_pass" HorizontalAlignment="Left" Height="632" Margin="10,46,0,0" VerticalAlignment="Top" Width="267" SelectionChanged="ListBox_SelectionChanged"/>
+        <ListBox Name="lb_pass" HorizontalAlignment="Left" Height="632" Margin="10,46,0,0" VerticalAlignment="Top" Width="267" SelectionChanged="ListBox_SelectionChanged" IsEnabled="False"/>
         <!-- Nome -->
         <Label x:Name="lb_nome" Content="Nome :" HorizontalAlignment="Left" Margin="313,70,0,0" VerticalAlignment="Top" Height="32" Width="79" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"

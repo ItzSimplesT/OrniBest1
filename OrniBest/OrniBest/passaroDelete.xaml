@@ -9,7 +9,7 @@
       Title="Apagar Pássaro" Background="White">
 
     <Grid>
-        <ListBox x:Name="lb_pass" HorizontalAlignment="Left" Height="635" Margin="10,43,0,0" VerticalAlignment="Top" Width="267"/>
+        <ListBox x:Name="lb_pass" HorizontalAlignment="Left" Height="635" Margin="10,43,0,0" VerticalAlignment="Top" Width="267" IsEnabled="False"/>
         <Label x:Name="lb_id" Content="Introduza o nº anilha :" HorizontalAlignment="Left" Margin="353,71,0,0" VerticalAlignment="Top" Height="32" Width="247" FontSize="15" FontFamily="MS Reference Sans Serif"/>
         <Border BorderThickness="2" BorderBrush="#FFC5C2C2" CornerRadius="15" Padding="2"
             HorizontalAlignment="Right" VerticalAlignment="Top" Height="32"  Width="226" Margin="0,71,267,0">

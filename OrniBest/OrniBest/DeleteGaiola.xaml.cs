@@ -23,6 +23,7 @@ namespace OrniBest
         public DeleteGaiola()
         {
             InitializeComponent();
+            try { 
             List<Gaiola2> utilG = new List<Gaiola2>();
             utilG = Gaiola2.lerRegistos();
             if (utilG.Count != 0)
@@ -38,8 +39,14 @@ namespace OrniBest
 
                 }
             }
-
         }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
+                
+            }
+
+}
 
         private void btt_Voltar2_Click(object sender, RoutedEventArgs e)
         {
@@ -49,6 +56,7 @@ namespace OrniBest
 
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             int codgaiola = Convert.ToInt32(tb_codgaiola.Text);
             Gaiola2.DeleteGaiola(codgaiola);
             lb_gaiola.Items.Clear();
@@ -66,6 +74,12 @@ namespace OrniBest
 
 
                 }
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui apagar os dados." + " " + ex.Message);
+
             }
         }
     }

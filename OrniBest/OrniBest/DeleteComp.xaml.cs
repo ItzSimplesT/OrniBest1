@@ -22,6 +22,7 @@ namespace OrniBest
     {
         public DeleteComp()
         {
+            try { 
             InitializeComponent();
             List<competicoes2> utilG = new List<competicoes2>();
             utilG = competicoes2.lerRegistos();
@@ -38,27 +39,41 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as exposições." + " " + ex.Message);
+
+            }
         }
 
         private void btt_deletef_Click(object sender, RoutedEventArgs e)
         {
-            int id_expo = Convert.ToInt32(tb_idexpo.Text);
-            competicoes2.DeleteExposicao(id_expo);
-            lb_expo.Items.Clear();
-            List<competicoes2> utilG = new List<competicoes2>();
-            utilG = competicoes2.lerRegistos();
-            if (utilG.Count != 0)
+            try
             {
-                foreach (var x in utilG)
+                int id_expo = Convert.ToInt32(tb_idexpo.Text);
+                competicoes2.DeleteExposicao(id_expo);
+                lb_expo.Items.Clear();
+                List<competicoes2> utilG = new List<competicoes2>();
+                utilG = competicoes2.lerRegistos();
+                if (utilG.Count != 0)
                 {
-                    string mostrar = x.id_exposicao.ToString() + " - " + x.nome;
+                    foreach (var x in utilG)
+                    {
+                        string mostrar = x.id_exposicao.ToString() + " - " + x.nome;
 
-                    lb_expo.Items.Add(mostrar);
+                        lb_expo.Items.Add(mostrar);
 
 
 
 
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui apagar os dados." + " " + ex.Message);
+                
             }
         }
 

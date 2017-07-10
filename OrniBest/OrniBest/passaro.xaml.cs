@@ -25,6 +25,7 @@ namespace OrniBest
         public passaro()
         {
             InitializeComponent();
+            try { 
             List<Especie> utilE = new List<Especie>();
             utilE = Especie.lerRegistos();
             if (utilE.Count != 0)
@@ -40,9 +41,16 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as especies." + " " + ex.Message);
+
+            }
+            try { 
             List<Gaiola2> utilG = new List<Gaiola2>();
             utilG = Gaiola2.lerRegistos();
-            if (utilE.Count != 0)
+            if (utilG.Count != 0)
             {
                 foreach (var x in utilG)
                 {
@@ -54,6 +62,12 @@ namespace OrniBest
 
 
                 }
+            }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
+
             }
         }
 
@@ -67,24 +81,31 @@ namespace OrniBest
 
         private void btt_adicionar_Click(object sender, RoutedEventArgs e)
         {
+            try { 
+                int especie = cb_especie.SelectedIndex + 1;
+                int id_utilizador = 1;
+                int gaiola = cb_gaiola.SelectedIndex + 1;
+                string sexo;
+                string foto = "aindan";
+                if (macho.IsChecked == true)
+                {
+                    sexo = "macho";
+                    passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, gaiola);
+                    passaro2.AddRegistos(registo);
 
-            int especie = cb_especie.SelectedIndex +1 ;            
-            int id_utilizador = 1;
-            int gaiola = cb_gaiola.SelectedIndex +1;
-            string sexo;
-            string foto = "aindan";
-            if (macho.IsChecked == true)
-            {
-                sexo = "macho";
-                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, gaiola);
-                passaro2.AddRegistos(registo);
+                }
+                if (femea.IsChecked == true)
+                {
+                    sexo = "femea";
+                    passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, gaiola);
+                    passaro2.AddRegistos(registo);
+                }
 
             }
-            if (femea.IsChecked == true)
+            catch (Exception ex)
             {
-                sexo = "femea";
-                passaro2 registo = new passaro2(System.Convert.ToInt32(tb_anilha.Text), System.Convert.ToInt32(tb_anilhamae.Text), System.Convert.ToInt32(tb_anilhapai.Text), sexo, tb_nome.Text, foto, tb_alimento.Text, id_utilizador, especie, gaiola);
-                passaro2.AddRegistos(registo);
+                MessageBox.Show("Não introduziu corretamente os dados." + " " + ex.Message);
+
             }
 
 

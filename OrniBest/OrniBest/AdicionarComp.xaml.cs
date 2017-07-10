@@ -27,8 +27,16 @@ namespace OrniBest
 
         private void btt_adicionarcomp_Click(object sender, RoutedEventArgs e)
         {
-            competicoes2 registo = new competicoes2(System.Convert.ToInt32(tb_idexposicao.Text), tb_nome.Text, data_exposicao.Text, tb_localizacao.Text, tb_morada.Text);
-            competicoes2.AddRegistos(registo);
+            try
+            {
+                competicoes2 registo = new competicoes2(System.Convert.ToInt32(tb_idexposicao.Text), tb_nome.Text, data_exposicao.Text, tb_localizacao.Text, tb_morada.Text);
+                competicoes2.AddRegistos(registo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui inserir dados. " + " " + ex.Message);
+                
+            }
         }
 
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)

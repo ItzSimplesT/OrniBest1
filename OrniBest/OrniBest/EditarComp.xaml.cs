@@ -23,6 +23,7 @@ namespace OrniBest
         public EditarComp()
         {
             InitializeComponent();
+            try { 
             List<competicoes2> utilG = new List<competicoes2>();
             utilG = competicoes2.lerRegistos();
             if (utilG.Count != 0)
@@ -38,6 +39,12 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui ler as gaiolas." + " " + ex.Message);
+
+            }
         }
 
         private void btt_Voltar_Click(object sender, RoutedEventArgs e)
@@ -48,6 +55,7 @@ namespace OrniBest
 
         private void btt_pesquisar_Click(object sender, RoutedEventArgs e)
         {
+            try { 
             string id_comp = tb_idcomp.Text;
             long codgaiolalong = Convert.ToInt64(id_comp);
             List<competicoes2> utilG = new List<competicoes2>();
@@ -68,12 +76,26 @@ namespace OrniBest
 
                 }
             }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui encontrar essa exposição." + " " + ex.Message);
+
+            }
         }
 
         private void btt_editarcomp_Click(object sender, RoutedEventArgs e)
         {
-            competicoes2 registo = new competicoes2(System.Convert.ToInt32(tb_id.Text), tb_nome.Text, data_exposicao.Text, tb_localizacao.Text , tb_morada.Text);
-            competicoes2.UptadeExposicao(registo, System.Convert.ToInt32(tb_id.Text));
+            try
+            {
+                competicoes2 registo = new competicoes2(System.Convert.ToInt32(tb_id.Text), tb_nome.Text, data_exposicao.Text, tb_localizacao.Text, tb_morada.Text);
+                competicoes2.UptadeExposicao(registo, System.Convert.ToInt32(tb_id.Text));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não consegui editar a Exposição" + " " + ex.Message);
+                
+            }
         }
     }
 }

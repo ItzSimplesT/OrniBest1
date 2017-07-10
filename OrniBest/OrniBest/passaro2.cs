@@ -51,52 +51,68 @@ namespace OrniBest
 
         public static List<passaro2> lerRegistos()
         {
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
-            myConn.Open();
-            string sql_select = "SELECT * FROM Passaro";
-            SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
-            SQLiteDataReader reader = myCommand.ExecuteReader();
-            utilP.Clear();
-            while (reader.Read())
+            try
             {
+                SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+                myConn.Open();
+                string sql_select = "SELECT * FROM Passaro";
+                SQLiteCommand myCommand = new SQLiteCommand(sql_select, myConn);
+                SQLiteDataReader reader = myCommand.ExecuteReader();
+                utilP.Clear();
+                while (reader.Read())
+                {
 
-                passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
-                                                    (long)reader["n_anilhamae"],
-                                                    (long)reader["n_anilhapai"],
-                                                    (string)reader["genero"],
-                                                    (string)reader["nome"],
-                                                    (string)reader["foto"],
-                                                    (string)reader["alimento"],
-                                                    (long)reader["id_utilizador"],
-                                                    (long)reader["id_especie"],
-                                                    (long)reader["id_gaiola"]);
-                utilP.Add(newPassaro);
+                    passaro2 newPassaro = new passaro2((long)reader["n_anilha"],
+                                                        (long)reader["n_anilhamae"],
+                                                        (long)reader["n_anilhapai"],
+                                                        (string)reader["genero"],
+                                                        (string)reader["nome"],
+                                                        (string)reader["foto"],
+                                                        (string)reader["alimento"],
+                                                        (long)reader["id_utilizador"],
+                                                        (long)reader["id_especie"],
+                                                        (long)reader["id_gaiola"]);
+                    utilP.Add(newPassaro);
+                }
+                reader.Dispose();
+                myConn.Close();
             }
-            reader.Dispose();
-            myConn.Close();
+            catch (Exception)
+            {
+                MessageBox.Show("Nao consegui ler a base de dados.");
+                throw;
+            }
             return utilP;
         }
         public static int AddRegistos(passaro2 utilP)
         {
+            try
+            {
+                SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
+                myConn.Open();
+                string sql_add = "INSERT INTO Passaro(n_anilha,n_anilhamae,n_anilhapai,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
+                        "VALUES (" + utilP.nanilha + "," + utilP.nanilhamae + "," + utilP.nanilhapai + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_gaiola + " ) ";
+                //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
+                SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                newCommand.ExecuteNonQuery();
 
-            SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
-            myConn.Open();
-            string sql_add = "INSERT INTO Passaro(n_anilha,n_anilhamae,n_anilhapai,genero,nome,foto,alimento, id_utilizador, id_especie, id_gaiola)" +
-                    "VALUES (" + utilP.nanilha + "," + utilP.nanilhamae + "," + utilP.nanilhapai + ",'" + utilP.genero + "','" + utilP.nome + "', '" + utilP.foto + "','" + utilP.Alimento + "'," + utilP.id_utilizador + " , " + utilP.id_especie + " , " + utilP.id_gaiola + " ) ";
-            //"VALUES ('" + util.nome + "','" + util.telemovel + "','" + util.stam + "', '" + util.data_nascimento + "','" + util.morada + "')" + "','" + util.codigo_postal + "')" + "','" + util.clube + "')";
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-           newCommand.ExecuteNonQuery();
+                string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
+                SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
+                SQLiteDataReader reader = idCommando.ExecuteReader();
+                int idUltimoRegisto = 0;
+                reader.Read(); // Ler na Base de Dados
+                idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
+                reader.Dispose();
+                myConn.Close();
+                MessageBox.Show("Adiocionado com sucesso!");
+                return idUltimoRegisto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Nao consegui adicionar com sucesso" + " " + ex.Message  );
+                return 0;
+            }
 
-            string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
-            SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
-            SQLiteDataReader reader = idCommando.ExecuteReader();
-            int idUltimoRegisto = 0;
-            reader.Read(); // Ler na Base de Dados
-            idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
-            reader.Dispose();
-            myConn.Close();
-            MessageBox.Show("Adiocionado com sucesso!");
-            return idUltimoRegisto;
 
 
         }
@@ -107,21 +123,28 @@ namespace OrniBest
             myConn.Open();
             utilP.id_utilizador = 1;
             string sql_add = "UPDATE `passaro` SET  `n_anilhamae` = " + utilP.nanilhamae + " ,`n_anilhapai` = " + utilP.nanilhapai + ",`genero` = '" + utilP.genero + "',`nome` = '" + utilP.nome + "',`foto`= '" + utilP.foto + "',`alimento`= '" + utilP.Alimento + "',`id_utilizador`= " + utilP.id_utilizador + ",`id_especie`=" + utilP.id_especie + ",`id_gaiola`=" + utilP.id_gaiola + " WHERE `n_anilha` = " + n_anilha;
-            
+            try
+            {
 
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            newCommand.ExecuteNonQuery();
+                SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                newCommand.ExecuteNonQuery();
 
-            string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
-            SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
-            SQLiteDataReader reader = idCommando.ExecuteReader();
-            int idUltimoRegisto = 0;
-            reader.Read(); // Ler na Base de Dados
-            idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
-            reader.Dispose();
-            myConn.Close();
-            MessageBox.Show("Adicionado com sucesso!");
-            return idUltimoRegisto;
+                string sql_id = "SELECT MAX(n_anilha) as idAtual FROM Passaro ";
+                SQLiteCommand idCommando = new SQLiteCommand(sql_id, myConn);
+                SQLiteDataReader reader = idCommando.ExecuteReader();
+                int idUltimoRegisto = 0;
+                reader.Read(); // Ler na Base de Dados
+                idUltimoRegisto = Convert.ToInt32(reader["idAtual"]);
+                reader.Dispose();
+                myConn.Close();
+                MessageBox.Show("Adicionado com sucesso!");
+                return idUltimoRegisto;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nao consegui ediar com sucesso");
+                throw;
+            }
 
 
         }
@@ -130,17 +153,26 @@ namespace OrniBest
             SQLiteConnection myConn = new SQLiteConnection("Data Source=OrniFile_v1.db; version=3");
             myConn.Open();
             int anilhapagar = n_anilhadelete;
-            string sql_add = "DELETE FROM `passaro` WHERE n_anilha= " + anilhapagar;
-            MessageBox.Show("Removido com sucesso!");
+            try
+            {
+                string sql_add = "DELETE FROM `passaro` WHERE n_anilha= " + anilhapagar;
 
-            SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
-            newCommand.ExecuteNonQuery();
 
-            return 1; 
+                SQLiteCommand newCommand = new SQLiteCommand(sql_add, myConn);
+                newCommand.ExecuteNonQuery();
+                MessageBox.Show("Removido com sucesso!");
+
+                return 1;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nao consegui ediar com sucesso");
+                throw;
+            }
+
+
+
         }
-
-
+        #endregion
     }
-    #endregion
-
 }
